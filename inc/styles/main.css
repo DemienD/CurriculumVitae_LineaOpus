@@ -1,0 +1,129 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  color: #12b287;
+}
+
+h1 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  height: 103px;
+  line-height: 103px;
+  background-color: rgba(18, 178, 135, .9);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  color: #fff!important;
+  padding: 0 7.7%;
+}
+
+header h1 {
+  display: inline;
+  vertical-align: middle;
+}
+
+nav.main-menu ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav.main-menu ul li{
+  display: inline-flex;
+  font-size: 27px;
+}
+
+nav.main-menu ul li a{
+  padding: 0 10px;
+  height: 99px;
+  color: #fff;
+  border-top: 3px rgba(0, 0, 0, 0) solid;
+}
+
+nav.main-menu ul li a:hover{
+  text-decoration: none;
+  border-top: 3px #ffaf1a solid;
+}
+
+nav.main-menu ul li.current a {
+  border-top: 3px #ffaf1a solid;
+}
+
+.intro-section {
+  background: url('../../images/intro.png') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.intro-section .row {
+  max-width: 1517px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro-card {
+  width: 414px;
+  height: 585px;
+  background: #fff;
+  margin-top: 28.2vh;
+  padding: 30px;
+}
+
+.intro-card p {
+  font-weight: 500;
+}
+
+input[type=text], select {
+  background: #e5e5e5;
+  border: none;
+  font-weight: 300;
+  font-size: 20px;
+  width: 100%;
+  color: #666;
+  height: 45px;
+  padding: 20px;
+  margin: 6.5px auto;
+}
+
+input[type=submit], .wideButton {
+  background: #ff4f1a;
+  border: none;
+  font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  color: #fff;
+  height: 45px;
+  margin: 6.5px auto;
+  line-height: 45px;
+}
