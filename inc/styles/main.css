@@ -149,7 +149,7 @@ input[type=submit], .wideButton {
 .quote-section {
   width: 70%;
   margin: 0 auto;
-  padding-top: 5%;
+  padding: 5% 0;
 }
 
 .quote {
@@ -195,4 +195,56 @@ input[type=submit], .wideButton {
   position: absolute;
   right: 11%;
   line-height: 3.5rem;
+}
+
+.row.template-section {
+  padding: 2.9vh 7.5%;
+  background-color: #f1f1f1;
+  margin: 0 auto;
+}
+
+.templates-support {
+  width: 30%;
+}
+
+.template {
+  width: 36.7%;
+}
+
+.template img {
+  width: 100%;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+.templates-list {
+  width: 70%;
+}
+
+.templates-list .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.template div {
+  width: 73.4%;
+  height: 14.1%;
+  border-radius: 13px;
+  background-color: rgba(102, 102, 102, 0.94);
+  transform: translate(13.3%, -177.6%);
+  color: #fff;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.template div p {
+  line-height: 85.7px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
