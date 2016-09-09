@@ -146,7 +146,7 @@ input[type=submit], .wideButton {
   padding: 15px;
 }
 
-.quote-section {
+.profile, .quote-section {
   width: 70%;
   margin: 0 auto;
   padding: 5% 0;
@@ -205,15 +205,45 @@ input[type=submit], .wideButton {
 
 .templates-support {
   width: 30%;
+  align-items: center;
 }
 
 .template {
-  width: 36.7%;
+  width: 343px;
+  height: 485px;
+
+  background: url(../../images/placeholder.jpg);
+  background-size: contain;
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3vh;
 }
 
-.template img {
-  width: 100%;
-  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+.template div:first-child {
+  height: 14%;
+  width: 70%;
+  background-color: #616161;
+  border-radius: 7px;
+  bottom: 8%;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  font-size: 2.3em;
+  line-height: 200%;
+  font-weight: 300;
+}
+
+.template div:nth-child(2) {
+  background: #ff8800;
+  width: 5vw;
+  height: 5vw;
+  position:absolute;
+  bottom:5%;
+  right:5%;
+  color: #fff;
+  text-align: center;
+  line-height: 5vw;
+  font-size: 3em;
+  border-radius: 50%;
 }
 
 .templates-list {
@@ -222,6 +252,7 @@ input[type=submit], .wideButton {
 
 .templates-list .row {
   width: 100%;
+  height: 50%;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -229,33 +260,4 @@ input[type=submit], .wideButton {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-}
-
-.template div {
-  width: 73.4%;
-  height: 10%;
-  border-radius: 13px;
-  background-color: rgba(102, 102, 102, 0.94);
-  transform: translate(13.3%, -177.6%);
-  color: #fff;
-  font-weight: 300;
-  font-size: 2em;
-}
-
-.template div p {
-  line-height: 85.7px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-
-.template div:nth-child(3) {
-  width: 10vh;
-  background: #ff4f1a;
-  border-radius: 100%;
-  height: 10vh;
-  transform: translate(281%, -219%);
-  text-align: center;
-  line-height: 9.5vh;
-  font-size: 3em;
 }
