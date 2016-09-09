@@ -118,13 +118,17 @@ input[type=text], select {
 }
 
 input[type=submit], .wideButton {
+  text-transform: uppercase;
   background: #ff4f1a;
   border: none;
   font-weight: 500;
   font-size: 20px;
-  width: 100%;
+  width: 85%;
   color: #fff;
   height: 45px;
   margin: 6.5px auto;
   line-height: 45px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
