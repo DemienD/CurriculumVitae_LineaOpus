@@ -54,7 +54,8 @@ nav.main-menu ul {
 
 nav.main-menu ul li{
   display: inline-flex;
-  font-size: 27px;
+  white-space: nowrap;
+  font-size: 1.7em;
 }
 
 nav.main-menu ul li a{
@@ -93,8 +94,8 @@ nav.main-menu ul li.current a {
 }
 
 .intro-card {
-  width: 414px;
-  height: 54.1vh;
+  max-width: 414px;
+  min-height: 54.1vh;
   background: #fff;
   margin-top: 28.2vh;
   padding: 30px;
