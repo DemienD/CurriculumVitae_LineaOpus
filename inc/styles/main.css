@@ -82,7 +82,7 @@ nav.main-menu ul li.current a {
 }
 
 .intro-section .row {
-  max-width: 1517px;
+  max-width: 80%;
   margin: 0 auto;
   display: -webkit-box;
   display: -moz-box;
@@ -94,7 +94,8 @@ nav.main-menu ul li.current a {
 }
 
 .intro-card {
-  max-width: 414px;
+  /*max-width: 414px;*/
+  max-width: 27.3%;
   min-height: 54.1vh;
   background: #fff;
   margin-top: 28.2vh;
@@ -128,9 +129,6 @@ input[type=submit], .wideButton {
   height: 45px;
   margin: 6.5px auto;
   line-height: 45px;
-  /*position: absolute;
-  bottom: 30px;
-  left: 30px;*/
 }
 
 .intro-steps li {
