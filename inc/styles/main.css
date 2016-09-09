@@ -132,3 +132,18 @@ input[type=submit], .wideButton {
   bottom: 30px;
   left: 30px;
 }
+
+.intro-steps li {
+  min-height: 45px;
+  margin: 6.5px auto;
+  padding: 7px;
+}
+
+.intro-steps li * {
+  margin: 0;
+
+}
+
+.intro-steps.links li {
+  padding: 15px;
+}
