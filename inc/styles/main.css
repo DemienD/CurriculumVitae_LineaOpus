@@ -123,14 +123,14 @@ input[type=submit], .wideButton {
   border: none;
   font-weight: 500;
   font-size: 20px;
-  width: 85%;
+  width: 100%;
   color: #fff;
   height: 45px;
   margin: 6.5px auto;
   line-height: 45px;
-  position: absolute;
+  /*position: absolute;
   bottom: 30px;
-  left: 30px;
+  left: 30px;*/
 }
 
 .intro-steps li {
