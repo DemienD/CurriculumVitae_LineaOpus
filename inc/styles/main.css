@@ -146,7 +146,7 @@ input[type=submit], .wideButton {
   padding: 15px;
 }
 
-.profile, .quote-section {
+.user-reviews, .quote-section {
   width: 70%;
   margin: 0 auto;
   padding: 5% 0;
@@ -260,4 +260,15 @@ input[type=submit], .wideButton {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
+}
+
+.user-reviews .profile {
+  width: 9vw;
+  height: 9vw;
+  background: #440;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: url('../../images/headshot.jpg');
+  background-size: cover;
+  margin-bottom: 50px; 
 }
