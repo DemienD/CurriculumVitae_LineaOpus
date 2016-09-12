@@ -25,7 +25,7 @@ ul {
 }
 
 /* CSS OUDE NAVIGATIE */
-header {
+.navbar .container-fluid {
   width: 100%;
   height: 8.5vh;
   line-height: 8.5vh;
@@ -38,43 +38,56 @@ header {
   padding: 0 7.7%;
 }
 
-header h1 {
+.navbar-brand h1 {
   display: inline;
   vertical-align: middle;
 }
-
-nav.main-menu ul {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: flex-end;
+@media only screen and (max-width:959px){
+  .navbar-collapse {
+    width: 105vw;
+    position: absolute;
+    top: 8.5vh;
+    left: 0;
+  }
+  ul.nav {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
 }
+@media only screen and (min-width:960px){
 
-nav.main-menu ul li{
-  display: inline-flex;
-  white-space: nowrap;
-  font-size: 1.7em;
+  .collapse ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .collapse ul li{
+    display: inline-flex;
+    white-space: nowrap;
+    font-size: 1.7em;
+  }
+
+  .collapse ul li a{
+    padding: 0 10px;
+    height: 100%;
+    color: #fff!important;
+    border-top: 3px rgba(0, 0, 0, 0) solid;
+  }
+
+  .collapse ul li a:hover{
+    text-decoration: none;
+    border-top: 3px #ffaf1a solid;
+    background: none;
+  }
+
+  .collapse ul li.current a {
+    border-top: 3px #ffaf1a solid;
+  }
 }
-
-nav.main-menu ul li a{
-  padding: 0 10px;
-  height: 100%;
-  color: #fff;
-  border-top: 3px rgba(0, 0, 0, 0) solid;
-}
-
-nav.main-menu ul li a:hover{
-  text-decoration: none;
-  border-top: 3px #ffaf1a solid;
-}
-
-nav.main-menu ul li.current a {
-  border-top: 3px #ffaf1a solid;
-}
-
 /* EINDE OUDE NAVIGATIE CSS */
 
 .intro-section {
