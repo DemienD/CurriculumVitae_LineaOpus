@@ -42,7 +42,7 @@ header h1 {
   vertical-align: middle;
 }
 
-nav.main-menu ul {
+div.main-menu ul {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -52,25 +52,25 @@ nav.main-menu ul {
   justify-content: flex-end;
 }
 
-nav.main-menu ul li{
+div.main-menu ul li{
   display: inline-flex;
   white-space: nowrap;
   font-size: 1.7em;
 }
 
-nav.main-menu ul li a{
+div.main-menu ul li a{
   padding: 0 10px;
   height: 100%;
   color: #fff;
   border-top: 3px rgba(0, 0, 0, 0) solid;
 }
 
-nav.main-menu ul li a:hover{
+div.main-menu ul li a:hover{
   text-decoration: none;
   border-top: 3px #ffaf1a solid;
 }
 
-nav.main-menu ul li.current a {
+div.main-menu ul li.current a {
   border-top: 3px #ffaf1a solid;
 }
 

@@ -13,31 +13,53 @@
   </head>
   <body>
     <!--                     Menu                     -->
-    <nav class="navbar">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><h1>CVCreate.nl</h1></a>
+      </div>
+      <div class="collapse navbar-collapse" id="collapsed-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Templates</a></li>
+          <li><a href="#">Over ons</a></li>
+          <li><a href="#">Voorwaarden</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- OUDE NAVIGATIE -->
+    <!--
       <header>
         <div class="row">
           <div class="col-md-3">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <h1>CVCreate.nl</h1>
+            <h1><a class="navbar-brand" href="#">CVCreate.nl</a></h1>
           </div>
           <div class="col-md-3 visible-lg-3"></div>
-          <nav class="col-md-6 main-menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul>
+          <div class="col-md-6 main-menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
               <li class="current"><a href="#">Home</a></li>
               <li><a href="#">Templates</a></li>
               <li><a href="#">Over ons</a></li>
               <li><a href="#">Voorwaarden</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
       </header>
-    </nav>
+     -->
     <!--                     Intro                     -->
     <div class="intro-section">
       <div class="row">
