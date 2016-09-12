@@ -270,5 +270,13 @@ input[type=submit], .wideButton {
   margin: 0 auto;
   background: url('../../images/headshot.jpg');
   background-size: cover;
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
+}
+
+footer.row {
+  width: 150%;
+  height: 10vh;
+  padding: 2%;
+  background: #29BA93;
+  color: #fff;
 }
