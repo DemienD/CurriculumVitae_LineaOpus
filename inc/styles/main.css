@@ -52,6 +52,20 @@ ul {
   ul.nav {
     background-color: rgba(255, 255, 255, 0.9);
   }
+
+  .intro-card {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .templates-support, .templates-list {
+    width: 100%!important;
+    align-items: center;
+  }
+
+  .template {
+    transform: scale(.9);
+  }
 }
 @media only screen and (min-width:960px){
 
@@ -87,36 +101,38 @@ ul {
   .collapse ul li.current a {
     border-top: 3px #ffaf1a solid;
   }
+
+
+  .intro-section {
+    background: url('../../images/intro.png') no-repeat center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    padding: 0 10.5vw 17.7vh 10.5vw;
+  }
+
+  .intro-section .row {
+    max-width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .intro-card {
+    max-width: 27.3%;
+    min-height: 54.1vh;
+    background: #fff;
+    margin-top: 28.2vh;
+    padding: 30px;
+  }
+
 }
 /* EINDE OUDE NAVIGATIE CSS */
-
-.intro-section {
-  background: url('../../images/intro.png') no-repeat center;
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  padding: 0 10.5vw 17.7vh 10.5vw;
-}
-
-.intro-section .row {
-  max-width: 100%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-}
-
-.intro-card {
-  max-width: 27.3%;
-  min-height: 54.1vh;
-  background: #fff;
-  margin-top: 28.2vh;
-  padding: 30px;
-}
 
 .intro-card p {
   font-weight: 500;
