@@ -251,8 +251,7 @@ input[type=submit], .wideButton {
 }
 
 .template {
-  width: 343px;
-  height: 485px;
+  width: 37%;
 
   background: url(../../images/placeholder.jpg);
   background-size: contain;

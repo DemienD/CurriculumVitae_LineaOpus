@@ -25,11 +25,8 @@
         <script type="text/javascript">
           $(document).ready( function() {
            var logoheight = $('.logo').height();
-          //  console.log(logoheight);
            var navHeight = $('#collapsed-navbar').height();
-          //  console.log(navHeight);
            var padding = (navHeight - logoheight)/6;
-          //  console.log(padding);
            $('.logo').css('margin-bottom', padding);
           })
         </script>
@@ -164,6 +161,10 @@
               <script type="text/javascript">
                 $(document).ready( function() {
                  $('#Test, .plus').width($('#Test').height());
+
+                 var temWidth = $('.template').width();
+                 var temHeight = temWidth * 1.4142857142857142857142857142857;
+                 $('.template').height(temHeight);
                 })
               </script>
             </div>
