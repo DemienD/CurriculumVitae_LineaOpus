@@ -16,6 +16,7 @@ h1 {
 
 .logo {
   height: 200%;
+  display: inline;
   padding-right: 2vw;
 }
 
