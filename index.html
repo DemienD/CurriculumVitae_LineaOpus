@@ -25,9 +25,12 @@
         <script type="text/javascript">
           $(document).ready( function() {
            var logoheight = $('.logo').height();
-           var navHeight = $('nav').height();
-           var padding = (navHeight - logoheight)/2;
-           $('.logo').css('padding-top', padding);
+          //  console.log(logoheight);
+           var navHeight = $('#collapsed-navbar').height();
+          //  console.log(navHeight);
+           var padding = (navHeight - logoheight)/6;
+          //  console.log(padding);
+           $('.logo').css('margin-bottom', padding);
           })
         </script>
       </div>
