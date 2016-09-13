@@ -23,6 +23,12 @@
         </button>
         <a class="navbar-brand" href="#"><h1><img class='logo' src="images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
         <script type="text/javascript">
+          function templateScale(){
+            var temWidth = $('.template').width();
+            var temHeight = temWidth * 1.4142857142857142857142857142857;
+            $('.template').height(temHeight);
+            $('#Test, .plus').width($('#Test').height());
+          }
           $(document).ready( function() {
            var logoheight = $('.logo').height();
            var navHeight = $('#collapsed-navbar').height();
@@ -160,11 +166,10 @@
               <div id="Test">+</div>
               <script type="text/javascript">
                 $(document).ready( function() {
-                 $('#Test, .plus').width($('#Test').height());
-
-                 var temWidth = $('.template').width();
-                 var temHeight = temWidth * 1.4142857142857142857142857142857;
-                 $('.template').height(temHeight);
+                  templateScale();
+                  $(window).resize( function() {
+                    templateScale()
+                  })
                 })
               </script>
             </div>
