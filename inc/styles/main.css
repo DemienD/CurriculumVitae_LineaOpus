@@ -173,6 +173,16 @@ input[type=submit], .wideButton {
   line-height: 45px;
 }
 
+select {
+  background: #e5e5e5 !important;
+  border: none !important;
+  font-weight: 300 !important;
+  font-size: 20px !important;
+  width: 100% !important;
+  color: #a9a9a9 !important;
+  height: 45px !important;
+}
+
 .intro-steps li {
   min-height: 45px;
   margin: 6.5px auto;
