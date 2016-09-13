@@ -24,8 +24,10 @@
         <a class="navbar-brand" href="#"><h1><img class='logo' src="images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
         <script type="text/javascript">
           function templateScale(){
-            var temWidth = $('.template').width();
-            var temHeight = temWidth * 1.4142857142857142857142857142857;
+            var temWidth = $('#XTI').width();
+            console.log(temWidth);
+            var temHeight = temWidth * 1.4153605015673981191222570532915;
+
             $('.template').height(temHeight);
             $('#Test, .plus').width($('#Test').height());
           }
@@ -160,7 +162,7 @@
       </div>
       <div class="col-lg-7 templates-list">
         <div class="row">
-          <div class="col-lg-6 template">
+          <div id="XTI" class="col-lg-6 template">
             <div>
               <p>Alfredo</p>
               <div id="Test">+</div>
