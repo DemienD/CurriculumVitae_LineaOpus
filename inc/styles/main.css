@@ -181,6 +181,8 @@ select {
   width: 100% !important;
   color: #a9a9a9 !important;
   height: 45px !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
 }
 
 .intro-steps li {
