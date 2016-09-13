@@ -24,7 +24,10 @@
         <a class="navbar-brand" href="#"><h1><img class='logo' src="images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
         <script type="text/javascript">
           $(document).ready( function() {
-           $('.navbar-brand').css('line-height', '$("#Test").height()');
+           var logoheight = $('.logo').height();
+           var navHeight = $('nav').height();
+           var padding = (navHeight - logoheight)/2;
+           $('.logo').css('padding-top', padding);
           })
         </script>
       </div>
