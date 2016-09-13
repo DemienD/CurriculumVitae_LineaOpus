@@ -275,14 +275,14 @@ input[type=submit], .wideButton {
 
 .template div:nth-child(2) {
   background: #ff4f1a;
-  width: 5vw;
-  height: 5vw;
-  position:absolute;
-  bottom:5%;
-  right:5%;
+  width: 6vw;
+  height: 6vw;
+  position: absolute;
+  bottom: -5%;
+  right: -10%;
   color: #fff;
   text-align: center;
-  line-height: 5vw;
+  line-height: 5.5vw;
   font-size: 3em;
   border-radius: 50%;
 }
