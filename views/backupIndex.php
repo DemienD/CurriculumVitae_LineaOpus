@@ -210,15 +210,15 @@
     <div class="row stats-section">
       <div class="stat col-md-4 ">
         <div class="disc"><span class="value">1000</span></div>
-        <h4>CV'S GEMAAKT</h4>
+        <h4>CV'S <br /> GEMAAKT</h4>
       </div>
       <div class="stat col-md-4 ">
         <div class="disc"><span class="value">200</span></div>
-        <h4>BANEN GEVONDEN</h4>
+        <h4>BANEN <br /> GEVONDEN</h4>
       </div>
       <div class="stat col-md-4 ">
         <div class="disc"><span class="value">30</span></div>
-        <h4>OPEN VACATURES</h4>
+        <h4>OPEN <br /> VACATURES</h4>
       </div>
     </div>
     <div class="row user-reviews">
