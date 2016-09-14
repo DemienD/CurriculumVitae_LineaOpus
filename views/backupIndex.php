@@ -209,15 +209,15 @@
     </div>
     <div class="row stats-section">
       <div class="stat">
-        <div class="col-md-4 disc"><span class="value"></span></div>
+        <div class="col-md-4 disc"><span class="value">WAARDE</span></div>
         <h4></h4>
       </div>
       <div class="stat">
-        <div class="col-md-4 disc"><span class="value"></span></div>
+        <div class="col-md-4 disc"><span class="value">Waarde</span></div>
         <h4></h4>
       </div>
       <div class="stat">
-        <div class="col-md-4 disc"><span class="value"></span></div>
+        <div class="col-md-4 disc"><span class="value">waarde</span></div>
         <h4></h4>
       </div>
     </div>
