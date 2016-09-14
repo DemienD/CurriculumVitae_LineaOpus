@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="inc/styles/main.css">
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <title>Home | CV for you</title>
+    <?php
+      require_once '../inc/includes.php';
+
+      foreach ($headArr as $head) {
+        echo $head;
+      }
+
+      foreach ($cssArr as $css) {
+        echo '<link rel="stylesheet" href='.$css.'>';
+      }
+
+      foreach ($jsArr as $js) {
+        echo '<script src='.$js.'></script>';
+      }
+    ?>
   </head>
   <body>
     <!--                     Menu                     -->
@@ -21,7 +27,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><h1><img class='logo' src="images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
+        <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
         <script type="text/javascript">
           function templateScale(){
             var temWidth = $('#XTI').width();
