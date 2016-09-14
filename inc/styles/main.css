@@ -97,7 +97,7 @@ nav .container-fluid {
   .collapse ul li{
     display: inline-flex;
     white-space: nowrap;
-    font-size: 1.7em;
+    font-size: 15px;
   }
 
   .collapse ul li a{
