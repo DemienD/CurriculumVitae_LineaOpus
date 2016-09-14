@@ -68,6 +68,11 @@ nav .container-fluid {
     background-color: rgba(255, 255, 255, 0.9);
   }
 
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  background: none;
+}
+
   .intro-card {
     display: block;
     width: 80%;
@@ -78,9 +83,7 @@ nav .container-fluid {
     align-items: center;
   }
 
-  .template {
-    transform: scale(.9);
-  }
+
 }
 @media only screen and (min-width:960px){
 
@@ -144,6 +147,10 @@ nav .container-fluid {
     background: #fff;
     margin-top: 28.2vh;
     padding: 30px;
+  }
+
+  .template-section {
+    padding-right: 0!important;
   }
 }
 /* EINDE OUDE NAVIGATIE CSS */
@@ -296,9 +303,8 @@ select {
 }
 
 .template {
-  width: 510px;
+  width: 25%;
   padding: 0;
-  margin: 0 15px;
   background: url("http://image.slidesharecdn.com/defa8171-e72a-4acd-93fa-db40d943e71f-150227034518-conversion-gate01/95/cva4-1-638.jpg?cb=1425030336");
   background-size: contain;
   box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
@@ -308,27 +314,30 @@ select {
 .template div:first-child {
   height: 14%;
   width: 70%;
-  background-color: #616161;
+  background-color: rgba(97,97,97,.8);
   border-radius: 7px;
   bottom: 8%;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: #fff;
   text-align: center;
-  font-size: 2.3em;
-  line-height: 200%;
+  font-size: 2vw;
+  line-height: 150%;
   font-weight: 300;
 }
 
 .template div:nth-child(2) {
   background: #ff4f1a;
   height: 120%;
-  position: absolute;
-  bottom: -5%;
-  right: -10%;
   color: #fff;
+  position: absolute;
+  left: 85%;
+  bottom: 22%;
+  transform: translateY(25%);
   text-align: center;
-  line-height: 100%;
-  font-size: 2em;
+  line-height: 110%;
+  font-size: 3vw;
   border-radius: 50%;
 }
 
@@ -345,7 +354,7 @@ select {
   display: -moz-flex;
   display: -webkit-flex;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .user-reviews .profile {
