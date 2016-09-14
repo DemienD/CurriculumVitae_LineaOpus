@@ -208,17 +208,17 @@
       </div>
     </div>
     <div class="row stats-section">
-      <div class="stat">
-        <div class="col-md-4 disc"><span class="value">WAARDE</span></div>
-        <h4></h4>
+      <div class="stat col-md-4 ">
+        <div class="disc"><span class="value">1000</span></div>
+        <h4>CV'S GEMAAKT</h4>
       </div>
-      <div class="stat">
-        <div class="col-md-4 disc"><span class="value">Waarde</span></div>
-        <h4></h4>
+      <div class="stat col-md-4 ">
+        <div class="disc"><span class="value">200</span></div>
+        <h4>BANEN GEVONDEN</h4>
       </div>
-      <div class="stat">
-        <div class="col-md-4 disc"><span class="value">waarde</span></div>
-        <h4></h4>
+      <div class="stat col-md-4 ">
+        <div class="disc"><span class="value">30</span></div>
+        <h4>OPEN VACATURES</h4>
       </div>
     </div>
     <div class="row user-reviews">
