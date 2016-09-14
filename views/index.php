@@ -27,7 +27,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
+        <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><?php if (isset(TITLE)) { echo TITLE } else { $error .= 'Error, TITLE unset /n'} ?></h1></a>
         <script type="text/javascript">
           function templateScale(){
             var temWidth = $('#XTI').width();
@@ -47,11 +47,15 @@
       </div>
       <div class="collapse navbar-collapse" id="collapsed-navbar">
         <ul class="nav navbar-right">
-          <li class="current"><a href="#">Home</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Over ons</a></li>
-          <li><a href="#">Voorwaarden</a></li>
-          <li><a href="#">Contact</a></li>
+          <?php
+            if($nav) {
+              foreach (MAIN_NAVIGATION as $title => $href) {
+                echo "<li><a href=".$href.">".$title."</a></li>";
+              }
+            } else {
+              $error .= "There was a problem with the navigation.../n"
+            }
+          ?>
         </ul>
       </div>
     </div>
@@ -61,80 +65,73 @@
     <div class="intro-section">
       <div class="row">
         <div class="col-lg-4 intro-card">
-          <h2>Snel aan de slag</h2>
-          <p>Vul je gegevens in om snel van start te gaan!</p>
+          <h2><?php if (isset(INTRO_HEAD)) { echo INTRO_HEAD } else { $error .= 'Error, INTRO_HEAD unset /n'} ?></h2>
+          <p><?php if (isset(INTRO_PARA)) { echo INTRO_PARA } else { $error .= 'Error, INTRO_PARA unset /n'} ?></p>
           <ul>
             <form action="">
-              <li><input name="startform-firstname" id="startform-firstname" type="text" placeholder="Voornaam"></li>
-              <li><input name="startform-lastname" id="startform-lastname" type="text" placeholder="Achternaam"></li>
-              <li><input name="startform-dob" id="startform-dob" type="text" placeholder="Geboortedatum"></li>
-              <li><input name="startform-email" id="startform-email" type="text" placeholder="Email"></li>
+              <li><input name="startform-firstname" id="startform-firstname" type="text" placeholder="<?php if (isset(STARTFORM_FIRSTNAME)) { echo STARTFORM_FIRSTNAME } else { $error .= 'Error, STARTFORM_FIRSTNAME unset /n'} ?>"></li>
+              <li><input name="startform-lastname" id="startform-lastname" type="text" placeholder="<?php if (isset(STARTFORM_LASTNAME)) { echo STARTFORM_LASTNAME } else { $error .= 'Error, STARTFORM_LASTNAME unset /n'} ?>"></li>
+              <li><input name="startform-dob" id="startform-dob" type="text" placeholder="<?php if (isset(STARTFORM_DOB)) { echo STARTFORM_DOB } else { $error .= 'Error, STARTFORM_DOB unset /n'} ?>"></li>
+              <li><input name="startform-email" id="startform-email" type="text" placeholder="<?php if (isset(STARTFROM_EMAIL)) { echo STARTFROM_EMAIL } else { $error .= 'Error, STARTFROM_EMAIL unset /n'} ?>"></li>
               <li>
                 <select name="startform-sector" id="startform-sector" class="form-control">
                   <option selected disabled>Select your option</option>
-                  <option value="1">Agrarisch &amp; Milieu</option>
-                  <option value="2">Bouw</option>
-                  <option value="3">Dieren &amp; Verzorging</option>
-                  <option value="4">Finance</option>
-                  <option value="5">Fashion &amp; Styling</option>
-                  <option value="6">Gezondheidszorg &amp; Farmacie</option>
-                  <option value="7">Handel/Groothandel/Detailhandel</option>
-                  <option value="8">Horeca</option>
-                  <option value="9">ICT</option>
-                  <option value="10">Industrie/Productie</option>
-                  <option value="11">Juridisch</option>
-                  <option value="12">Kunst, Cultuur &amp; Entertainment</option>
-                  <option value="13">Life Sciences</option>
-                  <option value="14">Marketing &amp; Communicatie</option>
-                  <option value="15">Media &amp; Journalistiek</option>
-                  <option value="16">Onderwijs</option>
-                  <option value="17">Reizen &amp; Recreatie</option>
-                  <option value="18">Techiek</option>
-                  <option value="19">Transport &amp; Logistiek</option>
-                  <option value="20">Zakelijke dienstverlening</option>
+                  <?php
+                    if(isset(SECTORS)) {
+                      foreach ($SECTORS as $name => $abbr) {
+                        echo '<option value='.$abbr.'>'.$name.'</option>';
+                      }
+                    } else {
+                      $error .= 'AN ERROR OCCURED; unable to print SECTORS'
+                    }
+                  ?>
+
                 </select>
               </li>
             </ul>
-            <input type="submit" value="Maak uw CV">
+            <input type="submit" value="<?php  if (isset(COLUMN_1_BUTTON)) { echo COLUMN_1_BUTTON } else { $error .= 'Error, COLUMN_1_BUTTON unset /n'} ?>">
         </form>
         </div>
         <div class="col-lg-4 intro-card">
-          <h2>Hoe werkt CVCreate?</h2>
-          <p>Volg de stappen en creëer je CV!</p>
+          <h2><?php if (isset(INTRO_HEAD_2)) { echo INTRO_HEAD_2 } else { $error .= 'Error, INTRO_HEAD_2 unset /n'} ?></h2>
+          <p><?php if (isset(INTRO_PARA_3)) { echo INTRO_PARA_3 } else { $error .= 'Error, INTRO_PARA_3 unset /n'} ?></p>
           <ul class="intro-steps">
             <li>
-              <h4>Stap 1</h4>
-              <p>Vul je gegevens in</p>
+              <h4><?php if (isset(INTRO_STEPS_HEAD_1)) { echo INTRO_STEPS_HEAD_1 } else { $error .= 'Error, INTRO_STEPS_HEAD_1 unset /n'} ?></h4>
+              <p><?php if (isset(INTRO_STEPS_1)) { echo INTRO_STEPS_1 } else { $error .= 'Error, INTRO_STEPS_1 unset /n'} ?></p>
             </li>
             <li>
-              <h4>Stap 2</h4>
-              <p>Kies de elementen voor <em>jouw</em> CV</p>
+              <h4><?php if (isset(INTRO_STEPS_HEAD_2)) { echo INTRO_STEPS_HEAD_2 } else { $error .= 'Error, INTRO_STEPS_HEAD_2 unset /n'} ?></h4>
+              <p><?php if (isset(INTRO_STEPS_2)) { echo INTRO_STEPS_2 } else { $error .= 'Error, INTRO_STEPS_2 unset /n'} ?></p>
             </li>
             <li>
-              <h4>Stap 3</h4>
-              <p>Kies de stijl voor <em>jouw</em> CV</p>
+              <h4><?php if (isset(INTRO_STEPS_HEAD_3)) { echo INTRO_STEPS_HEAD_3 } else { $error .= 'Error, INTRO_STEPS_HEAD_3 unset /n'} ?></h4>
+              <p><?php if (isset(INTRO_STEPS_3)) { echo INTRO_STEPS_3 } else { $error .= 'Error, INTRO_STEPS_3 unset /n'} ?></p>
             </li>
             <li>
-              <h4>Stap 4</h4>
-              <p>Betaal de eenmalige kosten</p>
+              <h4><?php if (isset(INTRO_STEPS_HEAD_4)) { echo INTRO_STEPS_HEAD_4 } else { $error .= 'Error, INTRO_STEPS_HEAD_4 unset /n'} ?></h4>
+              <p><?php if (isset(INTRO_STEPS_4)) { echo INTRO_STEPS_4 } else { $error .= 'Error, INTRO_STEPS_4 unset /n'} ?></p>
             </li>
             <li>
-              <h4>Stap 5</h4>
-              <p>Exporteer je CV en start direct met solliciteren!</p>
+              <h4><?php if (isset(INTRO_STEPS_HEAD_5)) { echo INTRO_STEPS_HEAD_5 } else { $error .= 'Error, INTRO_STEPS_HEAD_5 unset /n'} ?><?php if (isset(INTRO_HEAD_2)) { echo INTRO_HEAD_2 } else { $error .= 'Error, INTRO_HEAD_2 unset /n'} ?></h4>
+              <p><?php if (isset(INTRO_STEPS_5)) { echo INTRO_STEPS_5 } else { $error .= 'Error, INTRO_STEPS_5 unset /n'} ?></p>
             </li>
           </ul>
-          <a href=""><button class="wideButton">direct aan de slag</button></a>
+          <a href=""><button class="wideButton"><?php if (isset(COLUMN_2_BUTTON)) { echo COLUMN_2_BUTTON } else { $error .= 'Error, COLUMN_2_BUTTON unset /n'} ?></button></a>
         </div>
         <div class="col-lg-4 intro-card">
-          <h2>Een CV, wat nu?</h2>
-          <p>Ben jij op zoek naar werk? Wil je ergens solliciteren maar heb je nog geen CV om op te sturen?
-          CVCreate helpt je daarbij! Kijk hieronder eens naar onze CV mogelijkheden, lees de Tips &amp; Tricks of bekijk wat vacatures!</p>
+          <h2><?php if (isset(INTRO_HEAD_3)) { echo INTRO_HEAD_3 } else { $error .= 'Error, INTRO_HEAD_3 unset /n'} ?></h2>
+          <p><?php if (isset(INTRO_PARA_3)) { echo INTRO_PARA_3 } else { $error .= 'Error, INTRO_PARA_3 unset /n'} ?></p>
           <ul class="intro-steps links">
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">Tips &amp; tricks</a></li>
-            <li><a href="#">Kosten</a></li>
-            <li><a href="#">Vacatures</a></li>
-            <li><a href="#">Voorwaarden</a></li>
+            <?php
+              if(INTRO_LINKS) {
+                foreach (INTRO_LINKS as $title => $href) {
+                  echo "<li><a href=".$href.">".$title."</a></li>";
+                }
+              } else {
+                $error .= "There was a problem with the intro links.../n"
+              }
+            ?>
           </ul>
         </div>
       </div>
@@ -144,44 +141,47 @@
     <div class="quote-section">
       <p class="quote">
         <em class="quote-l">
-          Donec lacinia imperdiet lacus viverra dignissim.
+          <?php if (isset(QUOTE_L)) { echo QUOTE_L } else { $error .= 'Error, QUOTE_L unset /n'} ?>
         </em>
         <em class="quote-r">
-            Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+            <?php if (isset(QOUTE_R)) { echo QOUTE_R } else { $error .= 'Error, QOUTE_R unset /n'} ?>
         </em>
       </p>
-      <em class="author">L. Ipsum</em>
+      <em class="author"><?php if (isset(QOUTE_AUTHOR)) { echo QOUTE_AUTHOR } else { $error .= 'Error, QOUTE_AUTHOR unset /n'} ?></em>
     </div>
 
     <!--                     Templates                     -->
     <div class="row template-section">
       <div class="col-lg-4 templates-support">
-        <h2>CV Templates</h2>
-        <p>Sed imperdiet lobortis nisl, sed semper dolor lacinia rutrum. Morbi eu magna nulla. Proin dapibus dolor maximus, viverra ipsum sed, porta augue. Nunc a arcu pulvinar, dignissim erat id, efficitur diam.</p>
-        <p>Nulla facilisi. Morbi interdum mauris in viverra gravida. Nunc sit amet viverra enim, ac sodales turpis. Suspendisse sit amet arcu nec enim hendrerit sodales ac sed erat. Sed feugiat erat sit amet bibendum lacinia. Nam mattis interdum magna a viverra.</p>
-        <p>Curabitur pretium est tellus, eu mollis felis eleifend ac. Quisque nec massa sed diam luctus condimentum. Praesent mollis neque arcu, ac auctor libero vulputate sed. Vivamus id velit sapien. Aenean sit amet semper sapien, non placerat erat. Quisque pretium, dolor non pulvinar iaculis, augue lectus dictum leo, at cursus nunc ante ac dolor.</p>
+        <h2><?php if (isset(TEMPLATES_HEAD)) { echo TEMPLATES_HEAD } else { $error .= 'Error, TEMPLATES_HEAD unset /n'} ?></h2>
+        <p><?php if (isset(TEMPLATES_PARA)) { echo TEMPLATES_PARA } else { $error .= 'Error, TEMPLATES_PARA unset /n'} ?></p>
 
         <select name="categorie" id="categorie" class="form-control">
-          <option value="">categorie</option>
-          <option value="">categorie</option>
-          <option value="">categorie</option>
+          <?php
+            if(isset(TEMPLATE_CATAGORIES)) {
+              foreach (TEMPLATE_CATAGORIES as $name => $abbr) {
+                echo '<option value='.$abbr.'>'.$name.'</option>';
+              }
+            } else {
+              $error .= 'AN ERROR OCCURED; unable to print TEMPLATE_CATAGORIES/n'
+            }
         </select>
-        <a href="#"><button class="wideButton">Bekijk alle templates</button></a>
+        <a href="#"><button class="wideButton"><?php if (isset(TEMPLATES_BUTTON)) { echo TEMPLATES_BUTTON } else { $error .= 'Error, TEMPLATES_BUTTON unset /n'} ?></button></a>
       </div>
       <div class="col-lg-7 templates-list">
+        <script type="text/javascript">
+        $(document).ready( function() {
+          templateScale();
+          $(window).resize( function() {
+            templateScale()
+          })
+        })
+        </script>
         <div class="row">
           <div id="XTI" class="col-lg-6 template">
             <div>
               <p>Alfredo</p>
               <div id="Test">+</div>
-              <script type="text/javascript">
-                $(document).ready( function() {
-                  templateScale();
-                  $(window).resize( function() {
-                    templateScale()
-                  })
-                })
-              </script>
             </div>
           </div>
           <div class="col-lg-6 template">
@@ -227,12 +227,12 @@
       <div class="profile"></div>
       <p class="quote">
         <em class="quote-l">
-          Donec lacinia imperdiet lacus viverra dignissim.
+          <?php if (isset(FEEDBACK_L)) { echo FEEDBACK_L } else { $error .= 'Error, FEEDBACK_L unset /n'} ?>
         </em>
         <em class="quote-r">
-            Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+            <?php if (isset(FEEDBACK_R)) { echo FEEDBACK_R } else { $error .= 'Error, FEEDBACK_R unset /n'} ?>
         </em>
-        <em class="author">L. Ipsum</em>
+        <em class="author"><?php if (isset(FEEDBACK_AUTHOR)) { echo FEEDBACK_AUTHOR } else { $error .= 'Error, FEEDBACK_AUTHOR unset /n'} ?></em>
       </p>
     </div>
 
