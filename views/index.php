@@ -1,65 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <?php
-      foreach ($headArr as $head) {
-        echo $head;
-      }
-
-      // foreach ($cssArr as $css) {
-      //   echo '<link rel="stylesheet" href='.$css.'>';
-      // }
-
-      foreach ($jsArr as $js) {
-        echo '<script src='.$js.'></script>';
-      }
-    ?>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
-    <link rel='stylesheet' href='../inc/styles/landing.css'>
-    <link rel='stylesheet' href='../inc/styles/main.css'>
-
-  </head>
-  <body>
-    <!--                     Menu                     -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-navbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
-        <script type="text/javascript">
-          function templateScale(){
-            var temWidth = $('#XTI').width();
-            console.log(temWidth);
-            var temHeight = temWidth * 1.4153605015673981191222570532915;
-
-            $('.template').height(temHeight);
-            $('#Test, .plus').width($('#Test').height());
-          }
-          $(document).ready( function() {
-           var logoheight = $('.logo').height();
-           var navHeight = $('#collapsed-navbar').height();
-           var padding = (navHeight - logoheight)/6;
-           $('.logo').css('margin-bottom', padding);
-          })
-        </script>
-      </div>
-      <div class="collapse navbar-collapse" id="collapsed-navbar">
-        <ul class="nav navbar-right">
-          <li class="current"><a href="#">Home</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Over ons</a></li>
-          <li><a href="#">Voorwaarden</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
     <!--                     Intro                     -->
     <div class="intro-section">
       <div class="row">
@@ -240,11 +178,3 @@
         <em class="author">L. Ipsum</em>
       </p>
     </div>
-
-    <footer class="row">
-      <div class="col-md-3">&copy; Copyright 2016</div>
-      <div class="col-md-6"></div>
-      <div class="col-md-3">SOCIAL SOCIAL SOCIAL</div>
-    </footer>
-  </body>
-</html>
