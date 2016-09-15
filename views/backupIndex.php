@@ -162,9 +162,11 @@
         <p>Curabitur pretium est tellus, eu mollis felis eleifend ac. Quisque nec massa sed diam luctus condimentum. Praesent mollis neque arcu, ac auctor libero vulputate sed. Vivamus id velit sapien. Aenean sit amet semper sapien, non placerat erat. Quisque pretium, dolor non pulvinar iaculis, augue lectus dictum leo, at cursus nunc ante ac dolor.</p>
 
         <select name="categorie" id="categorie" class="form-control">
-          <option value="">categorie</option>
-          <option value="">categorie</option>
-          <option value="">categorie</option>
+          <option value="">Categorie</option>
+          <option value="">Categorie</option>
+          <option value="">Categorie</option>
+          <option value="">Categorie</option>
+          <option value="">Categorie</option>
         </select>
         <a href="#"><button class="wideButton">Bekijk alle templates</button></a>
       </div>
