@@ -1,4 +1,4 @@
 <?php
-  $template = 'inc/default_page.php';
+  $template = 'inc/master.php';
   $connect = 'inc/connection.php';
 ?>
