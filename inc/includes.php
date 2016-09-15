@@ -6,11 +6,11 @@
     '<link rel="stylesheet" href="inc/styles/main.css">'
   ];
 
-  $cssArr = [
-    '../inc/styles/main.css',
-    'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
-  ];
+  // $cssArr = [
+  //   '../inc/styles/main.css',
+  //   'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+  //   'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
+  // ];
 
   $jsArr = [
     'https://code.jquery.com/jquery-3.1.0.min.js',

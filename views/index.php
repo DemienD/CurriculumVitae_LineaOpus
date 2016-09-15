@@ -63,6 +63,33 @@
     <div class="intro-section">
       <div class="row">
         <div class="col-lg-4 intro-card">
+          <h2>Hoe werkt CVCreate?</h2>
+          <p>Volg de stappen en creëer je CV!</p>
+          <ul class="intro-steps">
+            <li>
+              <h4>Stap 1</h4>
+              <p>Vul je gegevens in</p>
+            </li>
+            <li>
+              <h4>Stap 2</h4>
+              <p>Kies de elementen voor <em>jouw</em> CV</p>
+            </li>
+            <li>
+              <h4>Stap 3</h4>
+              <p>Kies de stijl voor <em>jouw</em> CV</p>
+            </li>
+            <li>
+              <h4>Stap 4</h4>
+              <p>Betaal de eenmalige kosten</p>
+            </li>
+            <li>
+              <h4>Stap 5</h4>
+              <p>Exporteer je CV en start direct met solliciteren!</p>
+            </li>
+          </ul>
+          <a href=""><button class="wideButton">direct aan de slag</button></a>
+        </div>
+        <div class="col-lg-4 intro-card">
           <h2>Snel aan de slag</h2>
           <p>Vul je gegevens in om snel van start te gaan!</p>
           <form action="">
@@ -99,33 +126,6 @@
             </ul>
             <input type="submit" value="Maak uw CV">
         </form>
-        </div>
-        <div class="col-lg-4 intro-card">
-          <h2>Hoe werkt CVCreate?</h2>
-          <p>Volg de stappen en creëer je CV!</p>
-          <ul class="intro-steps">
-            <li>
-              <h4>Stap 1</h4>
-              <p>Vul je gegevens in</p>
-            </li>
-            <li>
-              <h4>Stap 2</h4>
-              <p>Kies de elementen voor <em>jouw</em> CV</p>
-            </li>
-            <li>
-              <h4>Stap 3</h4>
-              <p>Kies de stijl voor <em>jouw</em> CV</p>
-            </li>
-            <li>
-              <h4>Stap 4</h4>
-              <p>Betaal de eenmalige kosten</p>
-            </li>
-            <li>
-              <h4>Stap 5</h4>
-              <p>Exporteer je CV en start direct met solliciteren!</p>
-            </li>
-          </ul>
-          <a href=""><button class="wideButton">direct aan de slag</button></a>
         </div>
         <div class="col-lg-4 intro-card">
           <h2>Een CV, wat nu?</h2>
