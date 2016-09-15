@@ -4,16 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php
+      if(isset($additionalHead)){
+        echo $additionalHead;
+      }
+    ?>
 
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
-    <script src='parallax.min.js'></script>
+    <?php
+      if(isset($additionalJS)){
+        foreach($additionalJS as $script) {
+        echo '<script type="text/javascript" src="inc/scripts/'.$script.'"></script>';
+      }
+      }
+    ?>
 
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
-    <link rel='stylesheet' href='styles/main.css'>
-
-
+    <link rel='stylesheet' href='inc/styles/main.css'>
+    <?php
+      if(isset($additionalCSS)){
+        foreach($additionalCSS as $styleSheet) {
+          echo '<link rel="stylesheet" type="text/css" href="inc/styles/'.$styleSheet.'.css" />';
+        }
+      }
+    ?>
+    <title><?php
+      if(defined('PAGE_TITLE')){
+        echo PAGE_TITLE . " | CVCreate";
+      } else {
+        echo "CVCreate";
+      }; ?>
+    </title>
   </head>
   <body>
     <!--                     Menu                     -->
@@ -55,33 +78,13 @@
       </div>
     </nav>
     <!-- Start content -->
-    <div class="row header_section">
-      <div id="contImg" class="col-xs-12" data-parallax="scroll">
-        <script type="text/javascript">
-          $('#contImg').parallax({imageSrc: '../images/pageimage.jpg'});
-        </script>
-        <h2>
-          <center>
-            Page Title<br />
-            <small>Subtitle</small>
-          </center>
-        </h2>
-      </div>
-    </div>
-    <div class="row mainContent">
-      <div class="col-md-4">
-        <h3>Content</h3>
-        <p>lipsum</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Content</h3>
-        <p>lipsum</p>
-      </div>
-      <div class="col-md-4">
-        <h3>Content</h3>
-        <p>lipsum</p>
-      </div>
-    </div>
+    <?php
+      if(isset($view)){
+        require_once $view;
+      } else {
+        echo 'No content was found...';
+      }
+    ?>
     <!-- End content -->
     <footer class="row">
       <div class="col-md-3">&copy; Copyright 2016</div>
