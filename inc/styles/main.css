@@ -3,6 +3,7 @@ html, body {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,6 +54,11 @@ nav .container-fluid {
   display: inline;
   vertical-align: middle;
 }
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background: none!important;
+}
+
 @media only screen and (max-width:769px){
   .navbar-collapse {
     width: 105vw;
@@ -67,11 +73,6 @@ nav .container-fluid {
   ul.nav {
     background-color: rgba(255, 255, 255, 0.9);
   }
-
-.nav>li>a:focus, .nav>li>a:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  background: none;
-}
 
   .intro-card {
     display: block;
@@ -163,12 +164,11 @@ input[type=text], select {
   background: #e5e5e5;
   border: none;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1rem;
   width: 100%;
   color: #666;
-  height: 45px;
-  padding: 20px;
-  margin: 6.5px auto;
+  padding: 1.5rem;
+  margin: .5rem auto;
 }
 
 input[type=submit], .wideButton {
@@ -188,10 +188,9 @@ select {
   background: #e5e5e5 !important;
   border: none !important;
   font-weight: 300 !important;
-  font-size: 20px !important;
   width: 100% !important;
   color: #a9a9a9 !important;
-  height: 45px !important;
+  font-size: 1rem!important;
   border-radius: 0px !important;
   box-shadow: none !important;
 }
@@ -247,7 +246,7 @@ select {
 }
 
 .quote {
-  font-family: 'impact';
+  font-family: 'impact', sans-serif;
   color: #12b287;
   font-size: 10em;
   width: 100%:
@@ -257,7 +256,7 @@ select {
   color: #000;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  font-size: 3.5rem!important;
+  font-size: 2rem!important;
   display: block;
 }
 
@@ -270,7 +269,7 @@ select {
   text-align: right;
   display: block;
   color: #747474;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .author:before {

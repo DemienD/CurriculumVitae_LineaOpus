@@ -7,9 +7,9 @@
   ];
 
   $cssArr = [
+    '../inc/styles/main.css',
     'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
-    '../inc/styles/main.css'
+    'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'
   ];
 
   $jsArr = [

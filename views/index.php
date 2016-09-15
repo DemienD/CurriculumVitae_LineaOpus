@@ -6,14 +6,18 @@
         echo $head;
       }
 
-      foreach ($cssArr as $css) {
-        echo '<link rel="stylesheet" href='.$css.'>';
-      }
+      // foreach ($cssArr as $css) {
+      //   echo '<link rel="stylesheet" href='.$css.'>';
+      // }
 
       foreach ($jsArr as $js) {
         echo '<script src='.$js.'></script>';
       }
     ?>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
+    <link rel='stylesheet' href='../inc/styles/main.css'>
+
   </head>
   <body>
     <!--                     Menu                     -->
@@ -61,8 +65,8 @@
         <div class="col-lg-4 intro-card">
           <h2>Snel aan de slag</h2>
           <p>Vul je gegevens in om snel van start te gaan!</p>
-          <ul>
-            <form action="">
+          <form action="">
+            <ul>
               <li><input name="startform-firstname" id="startform-firstname" type="text" placeholder="Voornaam"></li>
               <li><input name="startform-lastname" id="startform-lastname" type="text" placeholder="Achternaam"></li>
               <li><input name="startform-dob" id="startform-dob" type="text" placeholder="Geboortedatum"></li>
@@ -238,7 +242,7 @@
 
     <footer class="row">
       <div class="col-md-3">&copy; Copyright 2016</div>
-      <div class="col-md-6 visible-md-6"></div>
+      <div class="col-md-6"></div>
       <div class="col-md-3">SOCIAL SOCIAL SOCIAL</div>
     </footer>
   </body>
