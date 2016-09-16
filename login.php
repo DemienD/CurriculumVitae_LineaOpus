@@ -8,6 +8,16 @@
   $additionalCSS = ['login'];
 
 
+  if(isSet($_POST['login'])) {
+    $error = '';
+    // CODE
+    // CODE
+    // CODE
+    // CODE
+    // CODE
+    // CODE
+  }
+
 
     $view = 'views/login.php';
 

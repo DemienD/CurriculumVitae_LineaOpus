@@ -25,7 +25,7 @@
         <input type="password" name="password" placeholder="Password" required>
         <br />
         <br />
-        <input type="submit" value="Sign-in" name="signin" id="signin">
+        <input type="submit" value="Sign-in" name="login" id="login">
       </form>
     </div>
   </div>
