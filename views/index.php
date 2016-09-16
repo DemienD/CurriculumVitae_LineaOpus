@@ -31,14 +31,14 @@
         <div class="col-lg-4 intro-card">
           <h2>Snel aan de slag</h2>
           <p>Vul je gegevens in om snel van start te gaan!</p>
-          <form action="">
+          <form method="post" action="create.php">
             <ul>
               <li><input name="startform-firstname" id="startform-firstname" type="text" placeholder="Voornaam"></li>
               <li><input name="startform-lastname" id="startform-lastname" type="text" placeholder="Achternaam"></li>
               <li><input name="startform-dob" id="startform-dob" type="text" placeholder="Geboortedatum"></li>
               <li><input name="startform-email" id="startform-email" type="text" placeholder="Email"></li>
               <li>
-                <select name="startform-sector" id="startform-sector" class="form-control">
+                <select required name="startform-sector" id="startform-sector" class="form-control">
                   <option selected disabled>Select your option</option>
                   <option value="1">Agrarisch &amp; Milieu</option>
                   <option value="2">Bouw</option>
@@ -63,7 +63,7 @@
                 </select>
               </li>
             </ul>
-            <input type="submit" value="Maak uw CV">
+            <input type="submit" name="submitCV" id="submitCV" value="Maak uw CV">
         </form>
         </div>
         <div class="col-lg-4 intro-card">
