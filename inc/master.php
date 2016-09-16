@@ -68,7 +68,7 @@
         </div>
         <div class="collapse navbar-collapse" id="collapsed-navbar">
           <ul class="nav navbar-right">
-            <li class="current"><a href="#">Home</a></li>
+            <li class="current"><a href="/">Home</a></li>
             <li><a href="#">Templates</a></li>
             <li><a href="#">Over ons</a></li>
             <li><a href="#">Voorwaarden</a></li>
