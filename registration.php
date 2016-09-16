@@ -48,19 +48,6 @@
     }
   }
 
-
-
-
-
-    // $properties = array('username' => 'userNAAM', 'email' => 'omg@meermail.org', 'password' => 'MijnGeheim4321');
-    //
-    // // print_r($properties);
-    //
-    // $voila = new User(true, $properties);
-    // $test = $voila->message;
-    // echo $test;
-    //
-
     $view = 'views/registration.php';
 
     include $template;
