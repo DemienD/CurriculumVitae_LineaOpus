@@ -111,7 +111,7 @@ nav .container-fluid {
   }
 }
 
-input[type=text], select {
+input[type=text], input[type=password], select {
   background: #e5e5e5;
   border: none;
   font-weight: 300;
@@ -167,7 +167,7 @@ footer.row {
   width: 150%;
   height: 10vh;
   padding: 2%;
-  position: relative;
   background: #29BA93;
   color: #fff;
+  clear: both;
 }

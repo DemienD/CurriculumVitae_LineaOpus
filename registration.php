@@ -1,8 +1,11 @@
 <?php
-  require_once '/inc/connection.php';
+  include 'inc/package.php';
   include '/inc/classes/user.php';
-?>
-<?php
+
+  define('PAGE_TITLE', 'Registration');
+
+  $additionalJS = ['parallax.min.js'];
+
   $error = '';
   $areSet = [
     'username'    => false,
@@ -31,7 +34,7 @@
   $complete = true;
   foreach($areSet as $key => $value){
     if($value == false){
-      $complete == false;
+      $complete = false;
     } else {
       $complete = true;
     }
@@ -40,11 +43,16 @@
   if($complete == true){
     // volgende stappen
   }
-    $properties = array('username' => 'userNAAM', 'email' => 'omg@meermail.org', 'password' => 'MijnGeheim4321');
+    // $properties = array('username' => 'userNAAM', 'email' => 'omg@meermail.org', 'password' => 'MijnGeheim4321');
+    //
+    // // print_r($properties);
+    //
+    // $voila = new User(true, $properties);
+    // $test = $voila->message;
+    // echo $test;
+    //
 
-    // print_r($properties);
+    $view = 'views/registration.php';
 
-    $voila = new User(true, $properties);
-    $test = $voila->message;
-    echo $test;
+    include $template;
 ?>
