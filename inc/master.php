@@ -73,6 +73,8 @@
             <li><a href="#">Over ons</a></li>
             <li><a href="#">Voorwaarden</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="/login.php">Sign-in</a></li>
+            <li><a href="/registration.php">Sign-up</a></li>
           </ul>
         </div>
       </div>
