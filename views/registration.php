@@ -11,6 +11,11 @@
     </h2>
   </div>
   <div class="col-md-6">
+    <h4><?php
+      if(isset($newUser->message)){
+        echo $newUser->message;
+      }
+    ?></h4>
     <form action="registration.php" method="post">
       <input type="text" name="username" placeholder="Username" required>
       <br />
