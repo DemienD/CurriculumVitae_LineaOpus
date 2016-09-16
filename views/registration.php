@@ -17,6 +17,10 @@
         if(isset($newUser->message)){
           echo $newUser->message;
         }
+
+        if(isset($error)){
+          echo $error;
+        }
       ?></h4>
       <form action="registration.php" method="post" class="regisForm">
         <input type="text" name="username" placeholder="Username" required>

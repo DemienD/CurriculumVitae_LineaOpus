@@ -28,11 +28,18 @@
       $error .= 'Email is a required field, please fill it out.';
     }
 
-    if(isSet($_POST['password']) && $_POST['passwordConf'] === $_POST['password']){
-      $areSet['password'] = $_POST['password'];
+    if(strlen($_POST['password']) > 6){
+      if(isSet($_POST['password']) && $_POST['passwordConf'] === $_POST['password']){
+        $areSet['password'] = $_POST['password'];
+      } else {
+        $error .= 'Passwords do not match.';
+      }
     } else {
-      $error .= 'Passwords do not match.';
+      $error .= 'Password is too short. It needs to be at least 6 characters long.';
     }
+
+
+
 
     $complete = true;
     foreach($areSet as $key => $value){
