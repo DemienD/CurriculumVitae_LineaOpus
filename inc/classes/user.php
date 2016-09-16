@@ -64,8 +64,6 @@
         }
         if($matches !== 0) {
           $this->message .= "This email and/or username already exists."."\n";
-          echo $this->message;
-          exit;
         } else {
           $insertUser = $conn->prepare("INSERT INTO `users` (`username`, `email`, `password`) VALUES (:username, :email, :password)");
           $insertUser->bindValue(':username', $this->username, PDO::PARAM_STR);
