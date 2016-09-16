@@ -24,7 +24,7 @@
       <input type="password" name="passwordConf" placeholder="Re-enter password" required>
       <br />
       <br />
-      <input type="submit" value="Submit">
+      <input type="submit" value="Register" name="register" id="register">
     </form>
   </div>
 
