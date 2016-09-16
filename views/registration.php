@@ -5,7 +5,7 @@
     </script>
     <h2>
       <center>
-        Registrate<br />
+        Register<br />
         <small>Registreer nu om Demiën uw CV te laten maken!</small>
       </center>
     </h2>
