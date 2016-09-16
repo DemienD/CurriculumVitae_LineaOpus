@@ -5,7 +5,7 @@
     </script>
     <h2>
       <center>
-        Register<br />
+        Sign-up<br />
         <small>Registreer nu om Demiën uw CV te laten maken!</small>
       </center>
     </h2>
@@ -31,7 +31,7 @@
         <input type="password" name="passwordConf" placeholder="Re-enter password" required>
         <br />
         <br />
-        <input type="submit" value="Register" name="register" id="register">
+        <input type="submit" value="Sign-up" name="register" id="register">
       </form>
     </div>
   </div>
