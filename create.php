@@ -63,12 +63,12 @@
 
   $linguarData = array(
     'language' => ['Taal', 'text', false],
-    'languageSkill' => ['Behendigheid', 'points', false],
+    'languageSkill' => ['Behendigheid', 'range', false],
   );
 
   $computerData = array(
     'program' => ['Programma', 'text', false],
-    'programSkill' => ['Behendigheid', 'points', false],
+    'programSkill' => ['Behendigheid', 'range', false],
   );
 
   $drivingData = array(
@@ -78,7 +78,7 @@
   // Sector specific
   $sectorProgramming = array(
     'programmingLanguage' => ['Programmeertaal', 'text', false],
-    'programmingSkill' => ['Behendigheid', 'points', false]
+    'programmingSkill' => ['Behendigheid', 'range', false]
   );
 
   $sectorProjects = array(
@@ -92,7 +92,7 @@
   if(isset($sector)) {
     switch ($sector) {
       case '9':
-      array_push($form, 'sectorProgramming', 'sectorProjects');
+      array_push($form, $sectorProgramming, $sectorProjects);
       break;
 
       default:
