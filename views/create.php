@@ -27,6 +27,9 @@
             $formCont = '';
             switch ($value[1]) {
               case 'text':
+              if($formSection[0][1]){
+                $name = $name.'[]';
+              }
               $formCont .= '<input name="'.$name.'" id="'.$name.'"
               type="'.$value[1].'"
               placeholder="'.$value[0];
@@ -94,7 +97,7 @@
           //   }
           // }
           if($formSection[0][1] == true) {
-            echo "<br /><h3 class='addForm' id='".$count."'>+ Extra veld toevoegen</h3>";
+            echo "<br /><h3 class='addForm' id='".$count."'>+ <small>Extra veld toevoegen</small></h3>";
           }
 
           $test2 = trim(preg_replace('/\s+/', ' ', $test));

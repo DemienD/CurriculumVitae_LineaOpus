@@ -28,6 +28,14 @@
         }
       } else {
         //login...
+        if(
+             isset($properties['email'])
+          && isset($properties['password'])
+        ) {
+          $this->email    = $properties['email'];
+          $this->password = $properties['password'];
+          $this->loginUser();
+        }
       }
     }
 

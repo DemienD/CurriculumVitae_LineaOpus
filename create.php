@@ -92,7 +92,9 @@
 
 
   //Save CV input
-  if(isset($_POST['saveCV'])) {}
+  if(isset($_POST['saveCV'])) {
+    print_r($_POST);
+  }
 
 
   $view = 'views/create.php';
