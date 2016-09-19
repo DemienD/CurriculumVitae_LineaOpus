@@ -3,6 +3,9 @@
   include '/inc/classes/user.php';
 
   define('PAGE_TITLE', 'Registration');
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
 
   $additionalCSS = ['registration'];
 
