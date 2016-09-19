@@ -14,9 +14,9 @@
 
   </div>
   <div class="col-md-6">
-    <form action="create.html" method="post">
       <?php
       if (isset($formSet) && $formSet == true) {
+        echo '<form action="create.php" method="post">'."\n";
         foreach ($form as $formSection) {
           echo "<hr />"."\n";
           echo "<h2>".$formSection[0]."</h2>";
@@ -55,10 +55,12 @@
             }
           }
         }
+        echo '<input type="submit" name="saveCV" id="saveCV" value="CV opslaan">'."\n";
+        echo '</form>';
+      } else {
+        echo '<a href="/"><button class="wideButton">Maak uw CV!</button></a>'."\n";
       }
       ?>
-      <input type="submit" name="saveCV" id="saveCV" value="CV opslaan">
-    </form>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm">
 

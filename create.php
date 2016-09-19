@@ -5,30 +5,6 @@
 
   $additionalCSS = ['create'];
 
-  //Handling the form on index.php
-
-  if (isset($_POST['submitCV'])) {
-    if (isset($_POST['startform-firstname'])) {
-      $firstName = $_POST['startform-firstname'];
-    }
-    if (isset($_POST['startform-lastname'])) {
-      $lastName = $_POST['startform-lastname'];
-    }
-    $completeName = $firstName . ' ' . $lastName;
-    if (isset($_POST['startform-dob'])) {
-      $dateOfBirth = $_POST['startform-dob'];
-    }
-    if (isset($_POST['startform-email'])) {
-      $email = $_POST['startform-email'];
-    }
-    if (isset($_POST['startform-sector'])) {
-      $sector = $_POST['startform-sector'];
-    }
-  }
-
-
-
-
   // General Data
 
   $personalData = array(
@@ -97,8 +73,8 @@
 
   //Default form elements
   $form = [$personalData, $educationData, $workExperienceData, $linguarData, $computerData, $linguarData];
-  if(isset($sector)) {
-    switch ($sector) {
+  if(isset($_POST['startform-sector'])) {
+    switch ($_POST['startform-sector']) {
       case '9':
       array_push($form, $sectorProgramming, $sectorProjects);
       break;
@@ -110,7 +86,30 @@
     $formSet = true;
   }
 
+
+  //Handling the form on index.php
+
+
+  //Save CV input
+  if(isset($_POST['saveCV'])) {}
+
+
   $view = 'views/create.php';
 
   include $template;
+
+  if (isset($_POST['submitCV'])) {
+    if (isset($_POST['startform-firstname'])) {
+      echo "<script>$('#firstName').val('".$_POST['startform-firstname']."')</script>";
+    }
+    if (isset($_POST['startform-lastname'])) {
+      echo "<script>$('#lastName').val('".$_POST['startform-lastname']."')</script>";
+    }
+    if (isset($_POST['startform-dob'])) {
+      echo "<script>$('#dob').val('".$_POST['startform-dob']."')</script>";
+    }
+    if (isset($_POST['startform-email'])) {
+      echo "<script>$('#email').val('".$_POST['startform-email']."')</script>";
+    }
+  }
 ?>
