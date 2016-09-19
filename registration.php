@@ -56,6 +56,7 @@
 
     if($complete == true){
       $newUser = new User(true, $areSet);
+      $error .= 'You have succesfully registered!';
     }
   }
 

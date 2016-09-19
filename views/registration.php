@@ -18,6 +18,10 @@
         if(isset($error)){
           echo $error;
         }
+
+        if(isset($succes)){
+          echo $succes;
+        }
       ?></h4>
       <form action="registration.php" method="post" class="regisForm">
         <input type="text" name="username" placeholder="Username" required>
