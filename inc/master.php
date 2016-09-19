@@ -79,6 +79,7 @@
         </div>
       </div>
     </nav>
+    <div class="container-fluid" style="min-height: 90vh; padding: 0; margin: 0;">
     <!-- Start content -->
     <?php
       if(isset($view)){
@@ -87,11 +88,12 @@
         echo 'No content was found...';
       }
     ?>
+    </div>
     <!-- End content -->
-    <footer class="row">
+    <div class="row footer" id="footer">
       <div class="col-md-3">&copy; Copyright 2016</div>
       <div class="col-md-6"></div>
       <div class="col-md-3">SOCIAL SOCIAL SOCIAL</div>
-    </footer>
+    </div>
   </body>
 </html>
