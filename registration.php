@@ -42,7 +42,7 @@
         $error .= 'Passwords do not match.';
       }
     } else {
-      $error .= 'Password is too short. It needs to be at least 6 characters long.';
+      $error .= 'Password is too short. It needs to be at least 7 characters long.';
     }
 
 
