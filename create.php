@@ -4,11 +4,12 @@
   define('PAGE_TITLE', 'Create');
 
   $additionalCSS = ['create'];
+  // $additionalJS = ['create.js'];
 
   // General Data
 
   $personalData = array(
-    'Persoonlijke informatie',
+    ['Persoonlijke informatie', false],
     'firstName'    => ['Voornaam', 'text', true],
     'lastName'     => ['Achternaam', 'text', true],
     'completeName' => ['Naam, volledig', 'text', true],
@@ -24,48 +25,48 @@
   );
 
   $educationData = array(
-    'Opleidingen',
-    'school' => ['School', 'text', false],
-    'education' => ['Opleiding', 'text', false],
-    'from' => ['Van', 'text', false],
-    'to' => ['Tot', 'text', false],
+    ['Opleidingen', true],
+    'education_school' => ['School', 'text', false],
+    'education_education' => ['Opleiding', 'text', false],
+    'education_from' => ['Van', 'text', false],
+    'education_to' => ['Tot', 'text', false]
   );
 
   $workExperienceData = array(
-    'Werkervaring',
-    'company' => ['Bedrijf', 'text', false],
-    'function' => ['Functie', 'text', false],
-    'tasks' => ['Taken', 'textarea', false],
-    'from' => ['Van', 'text', false],
-    'to' => ['Tot', 'text', false],
+    ['Werkervaring', true],
+    'work_company' => ['Bedrijf', 'text', false],
+    'work_function' => ['Functie', 'text', false],
+    'work_tasks' => ['Taken', 'textarea', false],
+    'work_from' => ['Van', 'text', false],
+    'work_to' => ['Tot', 'text', false]
   );
 
   $linguarData = array(
-    'Taalkennis',
+    ['Taalkennis', true],
     'language' => ['Taal', 'text', false],
-    'languageSkill' => ['Behendigheid', 'range', false],
+    'languageSkill' => ['Behendigheid', 'range', false]
   );
 
   $computerData = array(
-    'Programmas',
+    ['Programmas', true],
     'program' => ['Programma', 'text', false],
-    'programSkill' => ['Behendigheid', 'range', false],
+    'programSkill' => ['Behendigheid', 'range', false]
   );
 
   $drivingData = array(
-    'Rijbewijs',
-    'license' => ['Rijbewijs', 'text', false],
+    ['Rijbewijs', true],
+    'license' => ['Rijbewijs', 'text', false]
   );
 
   // Sector specific
   $sectorProgramming = array(
-    'Programmeertalen',
+    ['Programmeertalen', true],
     'programmingLanguage' => ['Programmeertaal', 'text', false],
     'programmingSkill' => ['Behendigheid', 'range', false]
   );
 
   $sectorProjects = array(
-    'Projecten',
+    ['Projecten', true],
     'project' => ['Projectnaam', 'text', false],
     'description' => ['Omschrijving', 'textarea', false],
     'link' => ['Link', 'text', false]
