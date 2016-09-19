@@ -12,14 +12,19 @@
 
   if(isSet($_POST['login'])) {
     $error = '';
+    $areSet = [
+        'email'       => false,
+        'password'    => false
+      ];
 
+    if($_SESSION['loggedIn'] != true){
+      if(isset($_POST['email']) && isset($_POST['password'])){
+        $logUser = new User(false, $areSet);
+      }
+    }
 
-    // CODE
-    // CODE
-    // CODE
-    // CODE
-    // CODE
-    // CODE
+    
+
   }
 
 

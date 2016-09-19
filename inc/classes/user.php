@@ -105,7 +105,17 @@
         if($matches !== 1) {
           $this->message .= 'Email/password invalid.';
         } else {
-          // user inloggen
+          $checkLogin = $conn->prepare("SELECT 'username' FROM 'users' WHERE 'email' = :email");
+          $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
+          try {
+            $checkLogin->execute();
+            $result = $checkLogin->fetch(PDO::FETCH_ASSOC);
+          } catch (PDOexception $e) {
+            $this->message .= 'Error '.$e;
+          }
+          $this->username = $result['username'];
+          $_SESSION['loggedIn'] = true;
+          $_SESSION['username'] = $this->username;
         }
       }
     }

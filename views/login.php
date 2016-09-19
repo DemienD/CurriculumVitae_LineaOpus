@@ -11,9 +11,13 @@
   <div class="form">
     <div class="col-md-6">
       <h4><?php
-        <!-- eventuele (isset) -->
+        // eventuele (isset)
         if(isSet($error)){
           echo $error;
+        }
+
+        if(isset($logUser->message)){
+          echo $logUser->message;
         }
         ?>
       </h4>
