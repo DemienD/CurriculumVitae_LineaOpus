@@ -23,7 +23,11 @@
     }
 
     if(isSet($_POST['email'])){
-      $areSet['email'] = $_POST['email'];
+      if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === true){
+        $areSet['email'] = $_POST['email'];
+      } else {
+        $error .= 'Email is invalid. Please enter a valid e-mail address.';
+      }
     } else {
       $error .= 'Email is a required field, please fill it out.';
     }
