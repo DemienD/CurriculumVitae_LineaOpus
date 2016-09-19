@@ -1,5 +1,14 @@
 #contImg {
-  background-image: url('../../images/create.view.jpg');
+  background-image: url('../../images/register.view.jpg');
   background-size: cover;
   background-position: center;
+}
+
+h2 {
+  color: ##12b287;
+
+}
+
+h2 > center > small {
+  color: #fff !important;
 }
