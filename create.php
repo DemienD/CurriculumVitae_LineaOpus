@@ -2,7 +2,10 @@
   include 'inc/package.php';
 
   define('PAGE_TITLE', 'Create');
-
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
+  
   $additionalCSS = ['create'];
   // $additionalJS = ['create.js'];
 
