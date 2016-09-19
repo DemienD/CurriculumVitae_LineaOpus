@@ -29,7 +29,7 @@
       } else {
         if(
              isset($properties['email'])
-          && isset($properties['wachtwoord'])
+          && isset($properties['password'])
         ) {
           $this->email    = $properties['email'];
           $this->password = $properties['password'];
