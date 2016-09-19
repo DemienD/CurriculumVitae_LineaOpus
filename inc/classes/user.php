@@ -91,7 +91,22 @@
     private function loginUser() {
       $conn = $this->establishConnection();
       if($conn !== false) {
+        $checkUser = $conn->prepare("SELECT 'email', 'password' FROM 'users' WHERE 'email' = :email AND 'password' = :password");
+        $checkUser->bindValue(':email', $this->email, PDO::PARAM_STR);
 
+        $password = $this->encrypt($this->password);
+        $checkUser->bindValue(':password', $password, PDO::PARAM_STR);
+        try {
+          $checkUser->execute();
+          $matches = $checkUser->rowCount();
+        } catch (PDOexception $e) {
+          $this->message .= 'Error '.$e;
+        }
+        if($matches !== 1) {
+          $this->message .= 'Email/password invalid.';
+        } else {
+          // user inloggen
+        }
       }
     }
 
