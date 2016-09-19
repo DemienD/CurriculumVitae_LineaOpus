@@ -1,0 +1,9 @@
+#contImg {
+  background-image: url('../../images/create.view.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.form-section {
+  padding: 3% 10%;
+}

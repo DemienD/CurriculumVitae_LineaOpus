@@ -3,7 +3,7 @@
 
   define('PAGE_TITLE', 'Create');
 
-  $additionalCSS = ['create.css'];
+  $additionalCSS = ['create'];
 
   //Handling the form on index.php
 
