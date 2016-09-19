@@ -3,7 +3,7 @@
 
   define('PAGE_TITLE', 'Create');
 
-  $additionalJS = ['parallax.min.js'];
+  $additionalCSS = ['create.css'];
 
   //Handling the form on index.php
 
@@ -32,6 +32,7 @@
   // General Data
 
   $personalData = array(
+    'Persoonlijke informatie',
     'firstName'    => ['Voornaam', 'text', true],
     'lastName'     => ['Achternaam', 'text', true],
     'completeName' => ['Naam, volledig', 'text', true],
@@ -47,6 +48,7 @@
   );
 
   $educationData = array(
+    'Opleidingen',
     'school' => ['School', 'text', false],
     'education' => ['Opleiding', 'text', false],
     'from' => ['Van', 'text', false],
@@ -54,6 +56,7 @@
   );
 
   $workExperienceData = array(
+    'Werkervaring',
     'company' => ['Bedrijf', 'text', false],
     'function' => ['Functie', 'text', false],
     'tasks' => ['Taken', 'textarea', false],
@@ -62,26 +65,31 @@
   );
 
   $linguarData = array(
+    'Taalkennis',
     'language' => ['Taal', 'text', false],
     'languageSkill' => ['Behendigheid', 'range', false],
   );
 
   $computerData = array(
+    'Programmas',
     'program' => ['Programma', 'text', false],
     'programSkill' => ['Behendigheid', 'range', false],
   );
 
   $drivingData = array(
+    'Rijbewijs',
     'license' => ['Rijbewijs', 'text', false],
   );
 
   // Sector specific
   $sectorProgramming = array(
+    'Programmeertalen',
     'programmingLanguage' => ['Programmeertaal', 'text', false],
     'programmingSkill' => ['Behendigheid', 'range', false]
   );
 
   $sectorProjects = array(
+    'Projecten',
     'project' => ['Projectnaam', 'text', false],
     'description' => ['Omschrijving', 'textarea', false],
     'link' => ['Link', 'text', false]

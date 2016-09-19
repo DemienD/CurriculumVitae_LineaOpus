@@ -12,6 +12,8 @@
       <?php
         if (isset($formSet) && $formSet == true) {
           foreach ($form as $formSection) {
+            echo "<hr />"."\n";
+            echo "<h2>".$formSection[0]."</h2>";
             foreach ($formSection as $name => $value) {
               switch ($value[1]) {
                 case 'text':
@@ -30,6 +32,7 @@
                   echo '</select>';
                   break;
                 case 'range':
+                  echo '<label for="'.$name.'">'.$value[0].'</label>';
                   echo '<input name="'.$name.'" id="'.$name.'"
                   type="'.$value[1].'"
                   min="0" max="10"
