@@ -6,3 +6,9 @@
   width: 100%;
   margin: 0 auto !important;
 }
+
+#contImg {
+  background-image: url('../../images/create.view.jpg');
+  background-size: cover;
+  background-position: center;
+}
