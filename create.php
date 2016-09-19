@@ -36,7 +36,7 @@
     'firstName'    => ['Voornaam', 'text', true],
     'lastName'     => ['Achternaam', 'text', true],
     'completeName' => ['Naam, volledig', 'text', true],
-    'maritalStatus' => ['Burgerlijke staat', 'select', true, ['ongehuwd', 'getrouwd']],
+    'maritalStatus' => ['Burgerlijke staat', 'select', true, ['Ongehuwd', 'Gehuwd']],
     'gender' => ['Geslacht', 'select', true, ['Man', 'Vrouw']],
     'address_street' => ['Straat, huisnummer', 'text', false],
     'address_zip' => ['Postcode, stad', 'text', false],

@@ -26,6 +26,7 @@
                   break;
                 case 'select':
                   echo '<select id="'.$name.'" name="'.$name.'">'."\n";
+                    echo '<option disabled selected>'.$value[0].'</option>'."\n";
                     foreach ($value[3] as $val) {
                       echo '<option value="'.$val.'">'.$val.'</option>'."\n";
                     }
