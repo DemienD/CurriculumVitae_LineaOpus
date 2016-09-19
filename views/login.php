@@ -10,11 +10,9 @@
   <div class="col-md-3"></div>
   <div class="form">
     <div class="col-md-6">
-      <h4><?php
-      //  if(isset($newUser->message)){
-      //    echo $newUser->message;
-      //  }
-      ?></h4>
+      <h4>
+        <!-- eventuele (isset) -->
+      </h4>
       <form action="login.php" method="post" class="loginForm">
         <input type="text" name="email" placeholder="Email" required>
         <br />

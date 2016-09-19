@@ -4,7 +4,6 @@
 
   define('PAGE_TITLE', 'Registration');
 
-  $additionalJS  = ['parallax.min.js'];
   $additionalCSS = ['registration'];
 
   if(isSet($_POST['register'])){

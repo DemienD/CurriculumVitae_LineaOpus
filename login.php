@@ -4,12 +4,13 @@
 
   define('PAGE_TITLE', 'Sign-in');
 
-  $additionalJS  = ['parallax.min.js'];
   $additionalCSS = ['login'];
 
 
   if(isSet($_POST['login'])) {
     $error = '';
+
+
     // CODE
     // CODE
     // CODE
