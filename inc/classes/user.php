@@ -27,10 +27,9 @@
           $this->message .= "Set values do not meet requested format. Contact a system administrator."."\n";
         }
       } else {
-        //login...
         if(
              isset($properties['email'])
-          && isset($properties['password'])
+          && isset($properties['wachtwoord'])
         ) {
           $this->email    = $properties['email'];
           $this->password = $properties['password'];
@@ -88,5 +87,16 @@
         }
       }
     }
+
+    private function loginUser() {
+      $conn = $this->establishConnection();
+      if($conn !== false) {
+
+      }
+    }
+
+
+
+
   }
 ?>

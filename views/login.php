@@ -10,8 +10,12 @@
   <div class="col-md-3"></div>
   <div class="form">
     <div class="col-md-6">
-      <h4>
+      <h4><?php
         <!-- eventuele (isset) -->
+        if(isSet($error)){
+          echo $error;
+        }
+        ?>
       </h4>
       <form action="login.php" method="post" class="loginForm">
         <input type="text" name="email" placeholder="Email" required>
