@@ -10,6 +10,7 @@
   if(isSet($_POST['register'])){
 
     $error = '';
+    $succes = '';
     $areSet = [
       'username'    => false,
       'email'       => false,
@@ -56,7 +57,7 @@
 
     if($complete == true){
       $newUser = new User(true, $areSet);
-      $error .= 'You have succesfully registered!';
+      $succes .= 'You have succesfully registered!';
     }
   }
 
