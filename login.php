@@ -17,16 +17,14 @@
         'password'    => false
       ];
 
-    if($_SESSION['loggedIn'] != true){
+    if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != true){
       if(isset($_POST['email']) && isset($_POST['password'])){
         $logUser = new User(false, $areSet);
       }
     }
 
-    
 
   }
-
 
     $view = 'views/login.php';
 

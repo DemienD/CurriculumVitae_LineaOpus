@@ -5,7 +5,7 @@
   if (session_status() == PHP_SESSION_NONE) {
     session_start();
   }
-  
+
   $additionalCSS = ['create'];
   // $additionalJS = ['create.js'];
 
@@ -96,7 +96,7 @@
 
   //Save CV input
   if(isset($_POST['saveCV'])) {
-    print_r($_POST);
+    echo $_POST;
   }
 
 
