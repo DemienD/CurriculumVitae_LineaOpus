@@ -1,8 +1,5 @@
 <div class="row header_section">
   <div id="contImg" class="col-xs-12" data-parallax="scroll">
-    <script type="text/javascript">
-      $('#contImg').parallax({imageSrc: '../images/pageimage.jpg'});
-    </script>
     <h2>
       <center>
         Sign in<br />
