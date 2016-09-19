@@ -94,7 +94,7 @@
           //   }
           // }
           if($formSection[0][1] == true) {
-            echo "<br /><h3 class='addForm' id='".$count."'>+</h3>";
+            echo "<br /><h3 class='addForm' id='".$count."'>+ Extra veld toevoegen</h3>";
           }
 
           $test2 = trim(preg_replace('/\s+/', ' ', $test));
