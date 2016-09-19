@@ -3,6 +3,9 @@
   include '/inc/classes/user.php';
 
   define('PAGE_TITLE', 'Sign-in');
+  if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+  }
 
   $additionalCSS = ['login'];
 
