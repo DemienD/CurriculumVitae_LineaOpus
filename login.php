@@ -22,13 +22,13 @@
         if($_SESSION['loggedIn']){
           if(isset($_POST['email']) && isset($_POST['password'])){
             $logUser = new User(false, $areSet);
-            $succes = 'U heeft ingelogd.';
+            $succes = 'U bent succesvol ingelogd.';
           }
         }
       } else {
         if(isset($_POST['email']) && isset($_POST['password'])){
           $logUser = new User(false, $areSet);
-          $succes = 'U heeft ingelogd.';
+          $succes = 'U bent succesvol ingelogd.';
         }
       }
   }
