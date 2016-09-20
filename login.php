@@ -31,7 +31,7 @@
         if(isset($_POST['email']) && isset($_POST['password'])){
           $logUser = new User(false, $areSet);
           $succes = 'U bent succesvol ingelogd.';
-          header('Location: root/');
+          header('Location: /');
           exit;
         }
       }
