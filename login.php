@@ -12,6 +12,7 @@
 
   if(isSet($_POST['login'])) {
     $error = '';
+    $succes = '';
     $areSet = [
         'email'       => false,
         'password'    => false
@@ -20,6 +21,7 @@
     if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] != true){
       if(isset($_POST['email']) && isset($_POST['password'])){
         $logUser = new User(false, $areSet);
+        $succes = 'U heeft ingelogd.';
       }
     }
 

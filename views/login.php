@@ -16,6 +16,10 @@
           echo $error;
         }
 
+        if(isSet($succes)){
+          echo $succes;
+        }
+
         if(isset($logUser->message)){
           echo $logUser->message;
         }
