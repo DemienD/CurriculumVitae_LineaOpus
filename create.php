@@ -96,7 +96,7 @@
 
   //Save CV input
   if(isset($_POST['saveCV'])) {
-    echo $_POST;
+    print_r($_POST);
   }
 
 
