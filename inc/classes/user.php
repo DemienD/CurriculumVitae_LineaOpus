@@ -91,7 +91,7 @@
     private function loginUser() {
         $conn = $this->establishConnection();
         if($conn !== false) {
-          $checkUser = $conn->prepare("SELECT 'email', 'password' FROM 'users' WHERE 'email' = :email AND 'password' = :password");
+          $checkUser = $conn->prepare("SELECT `email`, `password` FROM `users` WHERE `email` = :email AND `password` = :password");
           $checkUser->bindValue(':email', $this->email, PDO::PARAM_STR);
 
           $password = $this->encrypt($this->password);
@@ -99,13 +99,17 @@
           try {
             $checkUser->execute();
             $matches = $checkUser->rowCount();
+            $results = $checkUser->fetch(PDO::FETCH_ASSOC);
           } catch (PDOexception $e) {
             $this->message .= 'Error '.$e;
           }
-          if($matches > 1 || $matches < 0) {
+          if($matches != 1) {
             $this->message .= 'Invalid password/email';
+            header('Location: login.php');
+
+            exit;
           } else {
-            $checkLogin = $conn->prepare("SELECT 'id', 'username' FROM 'users' WHERE 'email' = :email");
+            $checkLogin = $conn->prepare("SELECT `id`, `username` FROM `users` WHERE `email` = :email");
             $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
             try {
               $checkLogin->execute();

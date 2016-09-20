@@ -49,7 +49,6 @@
             $logUser = new User(false, $areSet);
             $succes = 'U bent succesvol ingelogd.';
             header('Location: /');
-            exit;
           }
         }
       } else {
@@ -57,7 +56,6 @@
           $logUser = new User(false, $areSet);
           $succes = 'U bent succesvol ingelogd.';
           header('Location: /');
-          exit;
         }
       }
 
