@@ -23,6 +23,8 @@
         $logUser = new User(false, $areSet);
         $succes = 'U heeft ingelogd.';
       }
+    } else {
+      $error = 'Oops, something went wrong!';
     }
 
 
