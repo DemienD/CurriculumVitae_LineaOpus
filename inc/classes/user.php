@@ -102,8 +102,8 @@
         } catch (PDOexception $e) {
           $this->message .= 'Error '.$e;
         }
-        if($matches !== 1) {
-          $this->message .= 'Email/password invalid.';
+        if($matches >= 1 || $matches < 0) {
+          $this->message .= 'Invalid password/email';
         } else {
           $checkLogin = $conn->prepare("SELECT 'username' FROM 'users' WHERE 'email' = :email");
           $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
