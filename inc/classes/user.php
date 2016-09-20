@@ -89,37 +89,37 @@
     }
 
     private function loginUser() {
-      $conn = $this->establishConnection();
-      if($conn !== false) {
-        $checkUser = $conn->prepare("SELECT 'email', 'password' FROM 'users' WHERE 'email' = :email AND 'password' = :password");
-        $checkUser->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $conn = $this->establishConnection();
+        if($conn !== false) {
+          $checkUser = $conn->prepare("SELECT 'email', 'password' FROM 'users' WHERE 'email' = :email AND 'password' = :password");
+          $checkUser->bindValue(':email', $this->email, PDO::PARAM_STR);
 
-        $password = $this->encrypt($this->password);
-        $checkUser->bindValue(':password', $password, PDO::PARAM_STR);
-        try {
-          $checkUser->execute();
-          $matches = $checkUser->rowCount();
-        } catch (PDOexception $e) {
-          $this->message .= 'Error '.$e;
-        }
-        if($matches > 1 || $matches < 0) {
-          $this->message .= 'Invalid password/email';
-        } else {
-          $checkLogin = $conn->prepare("SELECT 'username' FROM 'users' WHERE 'email' = :email");
-          $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
+          $password = $this->encrypt($this->password);
+          $checkUser->bindValue(':password', $password, PDO::PARAM_STR);
           try {
-            $checkLogin->execute();
-            $result = $checkLogin->fetch(PDO::FETCH_ASSOC);
+            $checkUser->execute();
+            $matches = $checkUser->rowCount();
           } catch (PDOexception $e) {
             $this->message .= 'Error '.$e;
           }
-          $this->username = $result['username'];
-          $_SESSION['loggedIn'] = true;
-          $_SESSION['username'] = $this->username;
+          if($matches > 1 || $matches < 0) {
+            $this->message .= 'Invalid password/email';
+          } else {
+            $checkLogin = $conn->prepare("SELECT 'id', 'username' FROM 'users' WHERE 'email' = :email");
+            $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
+            try {
+              $checkLogin->execute();
+              $result = $checkLogin->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOexception $e) {
+              $this->message .= 'Error '.$e;
+            }
+            $this->username = $result['username'];
+            $_SESSION['loggedIn'] = true;
+            $_SESSION['id'] = $result['id'];
+            $_SESSION['username'] = $this->username;
+          }
         }
       }
-    }
-
 
 
 
