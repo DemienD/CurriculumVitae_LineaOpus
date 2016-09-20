@@ -85,13 +85,13 @@
     <div class="quote-section">
       <p class="quote">
         <em class="quote-l">
-          Donec lacinia imperdiet lacus viverra dignissim.
+          There are no secrets to succes. It is the result
         </em>
         <em class="quote-r">
-            Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+            of preparation, hard work and learning from failure.
         </em>
       </p>
-      <em class="author">L. Ipsum</em>
+      <em class="author">C. Powell</em>
     </div>
 
     <!--                     Templates                     -->
