@@ -42,7 +42,7 @@
     <?php
       if(isset($_SESSION['loggedIn'])){
         ?>
-        <!--                     Menu     1                -->
+        <!--                     Menu ingelogd                     -->
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -76,7 +76,7 @@
                 <li><a href="#">Over ons</a></li>
                 <li><a href="#">Voorwaarden</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Uitloggen</a></li>
+                <li><a href="/login.php?logout=1">Uitloggen</a></li>
               </ul>
             </div>
           </div>
@@ -86,7 +86,7 @@
         <?php
       } else {
     ?>
-    <!--                     Menu             2        -->
+    <!--                     Menu niet-ingelogd                     -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">

@@ -9,6 +9,14 @@
 
   $additionalCSS = ['login'];
 
+  if(isset($_GET['logout']) && $_GET['logout'] == 1) {
+    $_SESSION['loggedIn'] = false;
+    $_SESSION['username'] = '';
+    $_SESSION['id']= '';
+    $_GET['logout'] = 0;
+    session_unset();
+    session_destroy();
+  }
 
   if(isSet($_POST['login'])) {
     $error = '';
@@ -17,6 +25,7 @@
         'email'       => false,
         'password'    => false
       ];
+
 
       if(isset($_SESSION['loggedIn'])){
         if($_SESSION['loggedIn']){
@@ -35,6 +44,7 @@
           exit;
         }
       }
+
   }
 
     $view = 'views/login.php';
