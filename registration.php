@@ -22,27 +22,27 @@
     if(isSet($_POST['username'])){
       $areSet['username'] = $_POST['username'];
     } else {
-      $error .= 'Username is a required field, please fill it out.';
+      $error .= 'Gebruikersnaam is een vereist veld. Vul deze a.u.b. in.';
     }
 
     if(isSet($_POST['email'])){
       if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == true){
         $areSet['email'] = $_POST['email'];
       } else {
-        $error .= 'Email is invalid. Please enter a valid e-mail address.';
+        $error .= 'Email is ongeldig. Vul a.u.b. een geldig email adres in.';
       }
     } else {
-      $error .= 'Email is a required field, please fill it out.';
+      $error .= 'Email is een vereist veld. Vul deze a.u.b. in.';
     }
 
     if(strlen($_POST['password']) > 6){
       if(isSet($_POST['password']) && $_POST['passwordConf'] === $_POST['password']){
         $areSet['password'] = $_POST['password'];
       } else {
-        $error .= 'Passwords do not match.';
+        $error .= 'Wachtwoorden komen niet overeen.';
       }
     } else {
-      $error .= 'Password is too short. It needs to be at least 7 characters long.';
+      $error .= 'Wachtwoord is te kort. Het moet op zijn minst 7 karakters lang zijn.';
     }
 
 
@@ -59,7 +59,7 @@
 
     if($complete == true){
       $newUser = new User(true, $areSet);
-      $succes .= 'You have succesfully registered!';
+      $succes .= 'U bent geregistreerd!';
     }
   }
 

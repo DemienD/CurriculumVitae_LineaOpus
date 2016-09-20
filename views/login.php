@@ -2,7 +2,7 @@
   <div id="contImg" class="col-xs-12" data-parallax="scroll">
     <h2>
       <center>
-        Sign in<br />
+        Log in<br />
         <small>Sign in om Demiën uw CV te laten maken!</small>
       </center>
     </h2>
@@ -29,10 +29,10 @@
         <input type="text" name="email" placeholder="Email" required>
         <br />
         <br />
-        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="Wachtwoord" required>
         <br />
         <br />
-        <input type="submit" value="Sign-in" name="login" id="login">
+        <input type="submit" value="Log in" name="login" id="login">
       </form>
     </div>
   </div>

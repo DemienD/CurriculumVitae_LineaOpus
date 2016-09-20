@@ -2,7 +2,7 @@
   <div id="contImg" class="col-xs-12" data-parallax="scroll">
     <h2>
       <center>
-        Sign-up<br />
+        Registreer<br />
         <small>Registreer nu om Demiën uw CV te laten maken!</small>
       </center>
     </h2>
@@ -24,19 +24,19 @@
         }
       ?></h4>
       <form action="registration.php" method="post" class="regisForm">
-        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="username" placeholder="Gebruikersnaam" required>
         <br />
         <br />
         <input type="text" name="email" placeholder="Email" required>
         <br />
         <br />
-        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password" placeholder="Wachtwoord" required>
         <br />
         <br />
-        <input type="password" name="passwordConf" placeholder="Re-enter password" required>
+        <input type="password" name="passwordConf" placeholder="Bevestig wachtwoord" required>
         <br />
         <br />
-        <input type="submit" value="Sign-up" name="register" id="register">
+        <input type="submit" value="Registreer!" name="register" id="register">
       </form>
     </div>
   </div>
