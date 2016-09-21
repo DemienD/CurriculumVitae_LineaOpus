@@ -267,8 +267,9 @@
   width: 100%;
   text-align: center;
   display: block;
-  color: #747474;
+  color: #747474 !important;
   font-size: 1rem;
+  font-weight: 400 !important;
 }
 
 .item .author:before {
