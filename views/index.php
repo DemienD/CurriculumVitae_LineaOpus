@@ -181,7 +181,7 @@
         <!-- content voor carousel -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <div class="profile"></div>
+            <div class="profile" style="background: url('../../images/headshot.jpg');background-size: cover;"></div>
             <p class="quote">
               <em class="quote-l">
                 Donec lacinia imperdiet lacus viverra dignissim.
@@ -193,7 +193,7 @@
             </p>
           </div>
           <div class="item">
-            <div class="profile"></div>
+            <div class="profile" style="background: url('../../images/headshot2.jpg');background-size: cover;"></div>
             <p class="quote">
               <em class="quote-l">
                 Donec lacinia imperdiet lacus viverra dignissim.
@@ -205,7 +205,7 @@
             </p>
           </div>
           <div class="item">
-            <div class="profile">
+            <div class="profile" style="background: url('../../images/headshot3.jpg');background-size: cover;">
             </div>
             <p class="quote">
               <em class="quote-l">
