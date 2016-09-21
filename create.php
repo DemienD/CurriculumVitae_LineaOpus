@@ -1,5 +1,6 @@
 <?php
   include 'inc/package.php';
+  include 'inc/classes/concept.php';
 
   define('PAGE_TITLE', 'Create');
   if (session_status() == PHP_SESSION_NONE) {
@@ -58,7 +59,7 @@
 
   $drivingData = array(
     ['Rijbewijs', true],
-    'license' => ['Rijbewijs', 'text', false]
+    'license' => ['Rijbewijs', 'select', false,['A', 'A1', 'A2', 'AM', 'B', 'BE', 'C', 'CE', 'C1', 'C1E', 'D', 'DE', 'D1', 'D1E', 'T']]
   );
 
   // Sector specific
@@ -76,7 +77,7 @@
   );
 
   //Default form elements
-  $form = [$personalData, $educationData, $workExperienceData, $linguarData, $computerData, $linguarData];
+  $form = [$personalData, $educationData, $workExperienceData, $linguarData, $computerData, $drivingData];
   if(isset($_POST['startform-sector'])) {
     switch ($_POST['startform-sector']) {
       case '9':
@@ -96,7 +97,14 @@
 
   //Save CV input
   if(isset($_POST['saveCV'])) {
-    print_r($_POST);
+    if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+      if(isset($_SESSION['username']) && isset($_SESSION['id'])){
+        $concept = new Concept(true, $_POST, $_SESSION['username'], $_SESSION['id']);
+        header('Location: /profile.php');
+      }
+    } else {
+      echo "You're nog logged in";
+    }
   }
 
 
