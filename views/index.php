@@ -201,7 +201,7 @@
               <em class="quote-r">
                   Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
               </em>
-              <em class="author">L. Ipsum</em>
+              <em class="author">D. Drost</em>
             </p>
           </div>
           <div class="item">
@@ -213,7 +213,7 @@
               <em class="quote-r">
                   Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
               </em>
-              <em class="author">L. Ipsum</em>
+              <em class="author">J. Ribbers</em>
             </p>
           </div>
         </div>
