@@ -167,6 +167,55 @@
     <div class="row user-reviews">
       <!-- <div class="trigger"><</div>
       <div class="trigger">></div> -->
+
+      <!-- CAROUEL OPINIONS -->
+      <div class="carousel slide text-center" id="theCarousel" data-ride="carousel">
+        <!-- bottom dots -->
+        <ol class="carousel-indicators">
+          <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#theCarousel" data-slide-to="1"></li>
+          <li data-target="#theCarousel" data-slide-to="2"></li>
+          <li data-target="#theCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- content voor carousel -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <!-- <img src="" alt=""> -->
+              <h4>
+                "Bla die bla die blablabla. Good company." <br />
+                <span>Demiën Drost, Web developer, CVCreate</span>
+              </h4>
+          </div>
+          <div class="item">
+            <!-- <img src="" alt=""> -->
+              <h4>
+                "Bla die bla die blablabla. Good company." <br />
+                <span>Demiën Drost, Web developer, CVCreate</span>
+              </h4>
+          </div>
+          <div class="item">
+            <!-- <img src="" alt=""> -->
+              <h4>
+                "Bla die bla die blablabla. Good company." <br />
+                <span>Demiën Drost, Web developer, CVCreate</span>
+              </h4>
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+        <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a> 
+      </div>
+
+
+<!--
       <div class="profile"></div>
       <p class="quote">
         <em class="quote-l">
@@ -176,5 +225,5 @@
             Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
         </em>
         <em class="author">L. Ipsum</em>
-      </p>
+      </p> -->
     </div>

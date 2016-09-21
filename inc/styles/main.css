@@ -171,3 +171,8 @@ select {
   color: #fff;
   clear: both;
 }
+
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #ff4f1a;
+}
