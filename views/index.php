@@ -170,36 +170,52 @@
 
       <!-- CAROUEL OPINIONS -->
       <div class="carousel slide text-center" id="theCarousel" data-ride="carousel">
-        <!-- bottom dots -->
+        <!-- bottom dots --> <!--
         <ol class="carousel-indicators">
           <li data-target="#theCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#theCarousel" data-slide-to="1"></li>
           <li data-target="#theCarousel" data-slide-to="2"></li>
           <li data-target="#theCarousel" data-slide-to="3"></li>
-        </ol>
+        </ol>  -->
 
         <!-- content voor carousel -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <!-- <img src="" alt=""> -->
-              <h4>
-                "Bla die bla die blablabla. Good company." <br />
-                <span>Demiën Drost, Web developer, CVCreate</span>
-              </h4>
+            <div class="profile"></div>
+            <p class="quote">
+              <em class="quote-l">
+                Donec lacinia imperdiet lacus viverra dignissim.
+              </em>
+              <em class="quote-r">
+                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+              </em>
+              <em class="author">L. Ipsum</em>
+            </p>
           </div>
           <div class="item">
-            <!-- <img src="" alt=""> -->
-              <h4>
-                "Bla die bla die blablabla. Good company." <br />
-                <span>Demiën Drost, Web developer, CVCreate</span>
-              </h4>
+            <div class="profile"></div>
+            <p class="quote">
+              <em class="quote-l">
+                Donec lacinia imperdiet lacus viverra dignissim.
+              </em>
+              <em class="quote-r">
+                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+              </em>
+              <em class="author">L. Ipsum</em>
+            </p>
           </div>
           <div class="item">
-            <!-- <img src="" alt=""> -->
-              <h4>
-                "Bla die bla die blablabla. Good company." <br />
-                <span>Demiën Drost, Web developer, CVCreate</span>
-              </h4>
+            <div class="profile">
+            </div>
+            <p class="quote">
+              <em class="quote-l">
+                Donec lacinia imperdiet lacus viverra dignissim.
+              </em>
+              <em class="quote-r">
+                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+              </em>
+              <em class="author">L. Ipsum</em>
+            </p>
           </div>
         </div>
 
@@ -211,7 +227,7 @@
         <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
-        </a> 
+        </a>
       </div>
 
 
