@@ -205,8 +205,7 @@
             </p>
           </div>
           <div class="item">
-            <div class="profile" style="background: url('../../images/headshot3.jpg');background-size: cover;">
-            </div>
+            <div class="profile" style="background: url('../../images/headshot3.jpg');background-size: cover;"></div>
             <p class="quote">
               <em class="quote-l">
                 Donec lacinia imperdiet lacus viverra dignissim.
