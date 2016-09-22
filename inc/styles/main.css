@@ -70,8 +70,31 @@ nav .container-fluid {
     padding-top: 9vh;
   }
 
+  .navbar-header {
+    padding: 0 !important;
+  }
+  a.navbar-brand > h1 {
+    margin-top: 0 !important;
+  }
+
+  img.logo {
+    margin-top: -16% !important;
+  }
+
   ul.nav {
     background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .navbar-toggle {
+    border: none;
+  }
+
+  .navbar-toggle:focus {
+    background: none !important;
+  }
+
+  .icon-bar {
+    background-color: #ffffff !important;
   }
 }
 
