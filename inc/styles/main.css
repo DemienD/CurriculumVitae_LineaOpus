@@ -96,6 +96,11 @@ nav .container-fluid {
   .icon-bar {
     background-color: #ffffff !important;
   }
+
+  .notShow {
+    display: none;
+  }
+
 }
 
 @media only screen and (min-width:769px){
