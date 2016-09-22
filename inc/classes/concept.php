@@ -94,34 +94,41 @@
 
       try {
         $getConcept->execute();
-        $concept = $getConcept->fetch(PDO::FETCH_ASSOC);
-
         $getSalts->execute();
-        $decode = $getSalts->fetch(PDO::FETCH_ASSOC);
+
       } catch (PDOException $e) {
         echo "Something went wrong: ".$e."\n";
       }
-      $userName = $decode['username'];
 
-      $saved_bundle = $concept['concept'];
+      $rows = $getConcept->rowcount();
+      if($rows != 1) {
+        $this->concept = false;
+      } else {
+        $concept = $getConcept->fetch(PDO::FETCH_ASSOC);
+        $decode = $getSalts->fetch(PDO::FETCH_ASSOC);
 
-      // Parse iv and encrypted string segments
-      $components = explode( ':', $saved_bundle );;
+        $userName = $decode['username'];
 
-      $salt          = $components[0];
-      $iv            = $components[1];
-      $encrypted_msg = $components[2];
+        $saved_bundle = $concept['concept'];
+
+        // Parse iv and encrypted string segments
+        $components = explode( ':', $saved_bundle );;
+
+        $salt          = $components[0];
+        $iv            = $components[1];
+        $encrypted_msg = $components[2];
 
 
-      $decrypted_msg = openssl_decrypt(
-        "$encrypted_msg", 'aes-256-cbc', "$salt:$userName", null, $iv
-      );
+        $decrypted_msg = openssl_decrypt(
+          "$encrypted_msg", 'aes-256-cbc', "$salt:$userName", null, $iv
+        );
 
-      if ( $decrypted_msg === false ) {
-        die("Unable to decrypt \n");
+        if ( $decrypted_msg === false ) {
+          die("Unable to decrypt \n");
+        }
+
+        $this->concept = unserialize($decrypted_msg);
       }
-
-      $this->concept = unserialize($decrypted_msg);
     }
   }
 ?>
