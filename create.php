@@ -14,18 +14,18 @@
 
   $personalData = array(
     ['Persoonlijke informatie', false],
-    'firstName'    => ['Voornaam', 'text', true],
-    'lastName'     => ['Achternaam', 'text', true],
-    'completeName' => ['Naam, volledig', 'text', true],
-    'maritalStatus' => ['Burgerlijke staat', 'select', true, ['Ongehuwd', 'Gehuwd']],
-    'gender' => ['Geslacht', 'select', true, ['Man', 'Vrouw']],
-    'address_street' => ['Straat, huisnummer', 'text', false],
-    'address_zip' => ['Postcode, stad', 'text', false],
-    'telphone_land' => ['Vaste telefoon', 'text', false],
-    'telphone_mob' => ['Mobiel', 'text', false],
-    'dob' => ['Geboortedatum', 'text', true],
-    'cityob' => ['Geboorteplaats', 'text', true],
-    'email' => ['Email', 'text', true]
+    'personal_firstName'    => ['Voornaam', 'text', true],
+    'personal_lastName'     => ['Achternaam', 'text', true],
+    'personal_completeName' => ['Naam, volledig', 'text', true],
+    'personal_maritalStatus' => ['Burgerlijke staat', 'select', true, ['Ongehuwd', 'Gehuwd']],
+    'personal_gender' => ['Geslacht', 'select', true, ['Man', 'Vrouw']],
+    'personal_address_street' => ['Straat, huisnummer', 'text', false],
+    'personal_address_zip' => ['Postcode, stad', 'text', false],
+    'personal_telphone_land' => ['Vaste telefoon', 'text', false],
+    'personal_telphone_mob' => ['Mobiel', 'text', false],
+    'personal_dob' => ['Geboortedatum', 'text', true],
+    'personal_cityob' => ['Geboorteplaats', 'text', true],
+    'personal_email' => ['Email', 'text', true]
   );
 
   $educationData = array(
@@ -47,14 +47,14 @@
 
   $linguarData = array(
     ['Taalkennis', true],
-    'language' => ['Taal', 'text', false],
-    'languageSkill' => ['Behendigheid', 'range', false]
+    'language_lang' => ['Taal', 'text', false],
+    'language_skill' => ['Behendigheid', 'range', false]
   );
 
   $computerData = array(
     ['Programmas', true],
-    'program' => ['Programma', 'text', false],
-    'programSkill' => ['Behendigheid', 'range', false]
+    'program_progr' => ['Programma', 'text', false],
+    'program_skill' => ['Behendigheid', 'range', false]
   );
 
   $drivingData = array(
@@ -65,15 +65,15 @@
   // Sector specific
   $sectorProgramming = array(
     ['Programmeertalen', true],
-    'programmingLanguage' => ['Programmeertaal', 'text', false],
-    'programmingSkill' => ['Behendigheid', 'range', false]
+    'programming_lang' => ['Programmeertaal', 'text', false],
+    'programming_skill' => ['Behendigheid', 'range', false]
   );
 
   $sectorProjects = array(
     ['Projecten', true],
-    'project' => ['Projectnaam', 'text', false],
-    'description' => ['Omschrijving', 'textarea', false],
-    'link' => ['Link', 'text', false]
+    'project_name' => ['Projectnaam', 'text', false],
+    'project_description' => ['Omschrijving', 'textarea', false],
+    'project_link' => ['Link', 'text', false]
   );
 
   //Default form elements
@@ -114,16 +114,16 @@
 
   if (isset($_POST['submitCV'])) {
     if (isset($_POST['startform-firstname'])) {
-      echo "<script>$('#firstName').val('".$_POST['startform-firstname']."')</script>";
+      echo "<script>$('#personal_firstName').val('".$_POST['startform-firstname']."')</script>";
     }
     if (isset($_POST['startform-lastname'])) {
-      echo "<script>$('#lastName').val('".$_POST['startform-lastname']."')</script>";
+      echo "<script>$('#personal_lastName').val('".$_POST['startform-lastname']."')</script>";
     }
     if (isset($_POST['startform-dob'])) {
-      echo "<script>$('#dob').val('".$_POST['startform-dob']."')</script>";
+      echo "<script>$('#personal_dob').val('".$_POST['startform-dob']."')</script>";
     }
     if (isset($_POST['startform-email'])) {
-      echo "<script>$('#email').val('".$_POST['startform-email']."')</script>";
+      echo "<script>$('#personal_email').val('".$_POST['startform-email']."')</script>";
     }
   }
 ?>
