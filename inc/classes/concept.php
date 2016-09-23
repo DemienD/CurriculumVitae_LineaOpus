@@ -75,11 +75,11 @@
         }
       } else {
         //add
-        $saveConcept = $conn->prepare("INSERT INTO `concept` (`user`, `concept`) VALUES (:userId, :concept)");
-        $saveConcept->bindValue(':userId', $this->userId, PDO::PARAM_INT);
-        $saveConcept->bindValue(':concept', $msg_bundle, PDO::PARAM_STR);
+        $updateConcept = $conn->prepare("UPDATE `concept` SET `concept` = :concept WHERE `concept`.`user` = :userId");
+        $updateConcept->bindValue(':userId', $this->userId, PDO::PARAM_INT);
+        $updateConcept->bindValue(':concept', $msg_bundle, PDO::PARAM_STR);
         try{
-          $saveConcept->execute();
+          $updateConcept->execute();
         } catch (PDOexception $error) {
           echo "Something went wrong: ".$error."\n";
         }
