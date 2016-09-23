@@ -12,6 +12,7 @@
 
     <script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src="inc/scripts/main.js" type="text/javascript"></script>
     <?php
       if(isset($additionalJS)){
         foreach($additionalJS as $script) {
@@ -51,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span class="notShow">CVCreate.nl</span></h1></a>
+              <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
               <script type="text/javascript">
                 function templateScale(){
                   var temWidth = $('#XTI').width();
@@ -95,7 +96,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt="">CVCreate.nl</h1></a>
+          <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
           <script type="text/javascript">
             function templateScale(){
               var temWidth = $('#XTI').width();
