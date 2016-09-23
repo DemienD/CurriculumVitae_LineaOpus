@@ -96,8 +96,8 @@
 
 
   //Save CV input
-  if(isset($_POST['saveCV'])) {
-    if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+  if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
+    if(isset($_POST['saveCV'])) {
       if(isset($_SESSION['username']) && isset($_SESSION['id'])){
         $concept = new Concept(true, $_POST, $_SESSION['username'], $_SESSION['id']);
         header('Location: /profile.php');
@@ -105,10 +105,12 @@
     } else {
       echo "You're nog logged in";
     }
+    $view = 'views/create.php';
+  } else {
+    $view = '<p>You should <a href="login.php">login here,</a>prior to filling out this form.</p><p>Don\'t have an account yet? <a href="register.php">regsiter here!</a></p>';
   }
 
 
-  $view = 'views/create.php';
 
   include $template;
 
