@@ -17,7 +17,6 @@
           $this->userName = $userName;
           $this->concept = $concept;
           $this->userId = $uID;
-
           $this->encrypt();
         }
       } else {
@@ -45,6 +44,7 @@
       $this->salt = sha1(mt_rand());
       $this->iv = substr(sha1(mt_rand()), 0, 16);
 
+
       $serialized = serialize($this->concept);
       $encrypted = openssl_encrypt(
         $serialized, 'aes-256-cbc', "$this->salt:$this->userName", null, $this->iv
@@ -68,19 +68,22 @@
         $saveConcept = $conn->prepare("UPDATE `concept` SET `concept` = :concept WHERE `concept`.`id` = :userId");
         $saveConcept->bindValue(':userId', $this->userId, PDO::PARAM_INT);
         $saveConcept->bindValue(':concept', $msg_bundle, PDO::PARAM_STR);
+        try{
+          $saveConcept->execute();
+        } catch (PDOexception $error) {
+          echo "Something went wrong: ".$error."\n";
+        }
       } else {
         //add
         $saveConcept = $conn->prepare("INSERT INTO `concept` (`user`, `concept`) VALUES (:userId, :concept)");
         $saveConcept->bindValue(':userId', $this->userId, PDO::PARAM_INT);
         $saveConcept->bindValue(':concept', $msg_bundle, PDO::PARAM_STR);
+        try{
+          $saveConcept->execute();
+        } catch (PDOexception $error) {
+          echo "Something went wrong: ".$error."\n";
+        }
       }
-
-      try{
-        $saveConcept->execute();
-      } catch (PDOexception $error) {
-        echo "Something went wrong: ".$error."\n";
-      }
-
     }
 
     private function decrypt() {
