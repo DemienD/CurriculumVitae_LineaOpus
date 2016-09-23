@@ -25,3 +25,8 @@ li.val {
   font-size: 1.4em;
   color: #000;
 }
+#contImg {
+  background-image: url("../../images/profile.jpg");
+  background-position: center;
+  background-size: cover;
+}

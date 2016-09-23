@@ -175,9 +175,11 @@ select {
 }
 
 .row.header_section {
-  margin-top: 80px;
   height: 30vh;
-
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
 }
 
 .row.header_section .col-xs-12 {
