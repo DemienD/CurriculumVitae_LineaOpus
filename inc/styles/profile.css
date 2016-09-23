@@ -1,3 +1,27 @@
 .row {
   padding: 0 5%;
 }
+
+ul.hide {
+  display: none;
+}
+
+ul.concept {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0;
+}
+
+li.key {
+  color: #777777;
+  font-weight: 500;
+  font-size: .8em;
+  text-transform: capitalize;
+}
+
+li.val {
+  padding-bottom: 1em;
+  font-size: 1.4em;
+  color: #000;
+}
