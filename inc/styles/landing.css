@@ -244,7 +244,7 @@
 .item .quote {
   font-family: 'impact', sans-serif;
   color: #12b287;
-  font-size: 5em;
+  /*font-size: 5em;*/
   width: 100%:
 }
 
@@ -285,4 +285,30 @@
   position: absolute;
   right: 20%;
   line-height: 1rem;
+}
+
+@media only screen and (max-width: 426px) {
+  .item .quote:after, .item .quote:before {
+    content: '';
+  }
+
+  .item .quote em {
+    font-size: 0.9rem !important;
+  }
+
+  .item .author {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .profile {
+    background: none !important;
+  }
+
+  .item .quote {
+    margin: 0 auto;
+    margin-top: -10vh;
+    width: 80%;
+  }
 }
