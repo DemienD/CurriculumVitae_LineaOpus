@@ -12,7 +12,7 @@ function fixHeader() {
 $(document).ready(function(){
   fixHeader();
 
-  window.onresize = function(event) {
-    fixheader();
+  window.onresize = function() {
+    fixHeader();
   }
 });
