@@ -59,8 +59,11 @@ nav .container-fluid {
   background: none!important;
 }
 
-@media only screen and (max-width:769px){
+@media only screen and (max-width:376px) {
 
+}
+
+@media only screen and (max-width:769px){
   body {
     padding-top: 9vh;
   }
