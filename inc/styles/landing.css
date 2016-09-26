@@ -291,6 +291,10 @@
   .item .quote:before, .item .quote:after {
     font-size: 5rem;
   }
+
+  #collapsed-navbar > ul {
+    margin-left: -2vw !important;
+  }
 }
 
 @media only screen and (max-width: 426px) {
