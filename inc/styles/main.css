@@ -60,12 +60,18 @@ nav .container-fluid {
 }
 
 @media only screen and (max-width:376px) {
-
+  .intro-section {
+    margin-top: 8vh;
+  }
 }
 
 @media only screen and (max-width:769px){
   body {
     padding-top: 9vh;
+  }
+
+  .intro-section {
+    margin-top: 8vh;
   }
 
   .navbar-header {
