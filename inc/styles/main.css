@@ -103,7 +103,7 @@ nav .container-fluid {
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     width: 105vw;
     position: absolute;
-    top: 9vh;
+    top: 10vh;
     left: 0;
   }
 
@@ -128,6 +128,7 @@ nav .container-fluid {
   .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
+    height: 2vh !important;
   }
 
   .collapse.in {
