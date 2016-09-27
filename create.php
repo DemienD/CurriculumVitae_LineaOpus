@@ -40,7 +40,6 @@
     ['Werkervaring', true],
     'work_company' => ['Bedrijf', 'text', false],
     'work_function' => ['Functie', 'text', false],
-    'work_tasks' => ['Taken', 'textarea', false],
     'work_from' => ['Van', 'text', false],
     'work_to' => ['Tot', 'text', false]
   );
