@@ -98,8 +98,35 @@
   if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     if(isset($_POST['saveCV'])) {
       if(isset($_SESSION['username']) && isset($_SESSION['id'])){
-        $concept = new Concept(true, $_POST, $_SESSION['username'], $_SESSION['id']);
-        header('Location: /profile.php');
+        include 'inc/connection.php';
+        $start = $connection->prepare("INSERT INTO `concept` (`id`, `user`, `personal_firstName`, `personal_lastName`, `personal_maritalStatus`, `personal_gender`, `personal_address`, `personal_city`, `personal_telephoneLand`, `personal_telephoneMobile`, `personal_birthday`, `personal_birthCity`, `personal_email`, `education_school`, `education_education`, `education_from`, `education_to`, `work_company`, `work_function`, `work_from`, `work_to`, `language_language`, `language_skill`, `program_program`, `program_skill`, `license_type`) VALUES (NULL, '1', :personal_firstName, :personal_lastName, :personal_maritalStatus, :personal_gender, :personal_address, :personal_city, :personal_telephoneLand, :personal_telephoneMobile, :personal_birthday, :personal_birthCity, :personal_email, :education_school, :education_education, :education_from, :education_to, :work_company, :work_function, :work_from, :work_to, :language_language, :language_skill, :program_program, :program_skill, :license_type)");
+
+        $start->bindValue(':personal_firstName', $_POST['personal_firstName'], PDO::PARAM_STR);
+        $start->bindValue(':personal_lastName', $_POST['personal_lastName'], PDO::PARAM_STR);
+        $start->bindValue(':personal_maritalStatus', $_POST['personal_maritalStatus'], PDO::PARAM_STR);
+        $start->bindValue(':personal_gender', $_POST['personal_gender'], PDO::PARAM_STR);
+        $start->bindValue(':personal_address', $_POST['personal_address_street'], PDO::PARAM_STR);
+        $start->bindValue(':personal_city', $_POST['personal_address_zip'], PDO::PARAM_STR);
+        $start->bindValue(':personal_telephoneLand', $_POST['personal_telphone_land'], PDO::PARAM_STR);
+        $start->bindValue(':personal_telephoneMobile', $_POST['personal_telphone_mob'], PDO::PARAM_STR);
+        $start->bindValue(':personal_birthday', $_POST['personal_dob'], PDO::PARAM_STR);
+        $start->bindValue(':personal_birthCity', $_POST['personal_cityob'], PDO::PARAM_STR);
+        $start->bindValue(':personal_email', $_POST['personal_email'], PDO::PARAM_STR);
+        $start->bindValue(':education_school', serialize($_POST['education_school']), PDO::PARAM_STR);
+        $start->bindValue(':education_education', serialize($_POST['education_education']), PDO::PARAM_STR);
+        $start->bindValue(':education_from', serialize($_POST['education_from']), PDO::PARAM_STR);
+        $start->bindValue(':education_to', serialize($_POST['education_to']), PDO::PARAM_STR);
+        $start->bindValue(':work_company', serialize($_POST['work_company']), PDO::PARAM_STR);
+        $start->bindValue(':work_function', serialize($_POST['work_function']), PDO::PARAM_STR);
+        $start->bindValue(':work_from', serialize($_POST['work_from']), PDO::PARAM_STR);
+        $start->bindValue(':work_to', serialize($_POST['work_to']), PDO::PARAM_STR);
+        $start->bindValue(':language_language', serialize($_POST['language_lang']), PDO::PARAM_STR);
+        $start->bindValue(':language_skill', serialize($_POST['language_skill']), PDO::PARAM_STR);
+        $start->bindValue(':program_program', serialize($_POST['program_progr']), PDO::PARAM_STR);
+        $start->bindValue(':program_skill', serialize($_POST['program_skill']), PDO::PARAM_STR);
+        $start->bindValue(':license_type', serialize($_POST['license']), PDO::PARAM_STR);
+        $start->execute();
+        // header('Location: /profile.php');
       }
     }
     $view = 'views/create.php';
