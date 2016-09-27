@@ -101,8 +101,6 @@
         $concept = new Concept(true, $_POST, $_SESSION['username'], $_SESSION['id']);
         header('Location: /profile.php');
       }
-    } else {
-      echo "You're nog logged in";
     }
     $view = 'views/create.php';
   } else {
