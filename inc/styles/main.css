@@ -128,12 +128,12 @@ nav .container-fluid {
   .navbar-nav>li>a {
     padding-top: 10px;
     padding-bottom: 10px;
-    height: 2vh !important;
   }
 
   .collapse.in {
     display:block !important;
     left: 0 !important;
+    height: 100vh !important;
   }
 
   ul.nav {
