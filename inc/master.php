@@ -141,7 +141,7 @@
     <!-- End content -->
     <div class="row footer" id="footer">
       <div class="col-md-3">&copy; Copyright 2016</div>
-      <div class="col-md-6"></div>
+      <div class="col-md-6"><iframe width="329" height="113" src="https://w2.countingdownto.com/1537977" frameborder="0"></iframe></div>
       <div class="col-md-3">SOCIAL SOCIAL SOCIAL</div>
     </div>
   </body>
