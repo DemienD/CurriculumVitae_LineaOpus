@@ -25,7 +25,59 @@
         }
         ?>
       </h4>
-      <?php echo $content; ?>
+      <ul class="concept">
+        <li class='title'>
+          Voornaam
+        </li>
+        <li class='content'>
+          <?php echo $firstname; ?>
+        </li>
+        <li class='title'>
+          Titel
+        </li>
+        <li class='content'>
+          <?php echo $gender; ?>
+        </li>
+        <li class='title'>
+          Geboortedatum
+        </li>
+        <li class='content'>
+          <?php echo $age; ?>
+        </li>
+        <li class='title'>
+          Opleidingen
+        </li>
+        <li class='content'>
+          <?php
+            foreach ($education as $key => $value) {
+              echo $value . ' ';
+            }
+          ?>
+        </li>
+        <li class='title'>
+          Functies
+        </li>
+        <li class='content'>
+          <?php
+            foreach ($function as $key => $value) {
+              echo $value . ' ';
+            }
+          ?>
+        </li>
+        <li class='title'>
+          Talen
+        </li>
+        <li class='content'>
+          <?php
+           $counter = 0;
+           foreach ($language as $index => $lang) {
+             echo $lang . ' ' . $skill[$counter] . "<br />";
+             $counter += 1;
+           }
+           ?>
+        </li>
+
+      </ul>
     </div>
   </div>
   <div class="col-md-3">

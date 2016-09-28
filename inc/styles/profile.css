@@ -13,14 +13,14 @@ ul.concept {
   padding-right: 0;
 }
 
-li.key {
+li.title {
   color: #777777;
   font-weight: 500;
   font-size: .8em;
   text-transform: capitalize;
 }
 
-li.val {
+li.content {
   padding-bottom: 1em;
   font-size: 1.4em;
   color: #000;
