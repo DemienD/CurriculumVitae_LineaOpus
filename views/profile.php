@@ -71,7 +71,7 @@
           <?php
            $counter = 0;
            foreach ($language as $index => $lang) {
-             echo $lang . ' ' . $skill[$counter] . "<br />";
+             echo $lang . ' <span class="score">' . $skill[$counter] . "</span><br />";
              $counter += 1;
            }
            ?>

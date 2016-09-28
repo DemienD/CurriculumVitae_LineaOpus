@@ -13,6 +13,22 @@ ul.concept {
   padding-right: 0;
 }
 
+span.score {
+  color: #888888;
+  font-size: 1.3rem;
+}
+
+span.score:before {
+  content: " | ";
+  color: #000;
+  font-weight: 300;
+}
+
+span.score:after {
+  content: "/10";
+  font-size: 1rem;
+}
+
 li.title {
   color: #777777;
   font-weight: 500;
