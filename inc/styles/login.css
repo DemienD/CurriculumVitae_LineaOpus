@@ -3,3 +3,14 @@
   background-size: cover;
   background-position: center;
 }
+
+@media only screen and (max-width: 769px){
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header_section {
+    
+  }
+}
