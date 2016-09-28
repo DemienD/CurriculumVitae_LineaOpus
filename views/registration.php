@@ -7,6 +7,7 @@
       </center>
     </h2>
   </div>
+</div>
   <div class="col-md-3"></div>
   <div class="form">
     <div class="col-md-6">
@@ -41,6 +42,4 @@
     </div>
   </div>
   <div class="col-md-3">
-
   </div>
-</div>

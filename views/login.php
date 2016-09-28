@@ -5,6 +5,7 @@
         Log in<br />
         <small>Sign in om Demiën uw CV te laten maken!</small>
       </center>
+    </div>
     </h2>
   </div>
   <div class="col-md-3"></div>
@@ -38,4 +39,3 @@
   </div>
   <div class="col-md-3">
   </div>
-</div>
