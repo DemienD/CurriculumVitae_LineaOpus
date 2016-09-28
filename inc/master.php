@@ -45,7 +45,7 @@
         ?>
         <!--                     Menu ingelogd                     -->
         <nav class="navbar navbar-default">
-          <div class="container-fluid headerbar">
+          <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-navbar">
                 <span class="icon-bar"></span>
