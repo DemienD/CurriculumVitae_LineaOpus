@@ -157,8 +157,12 @@
   align-items: center;
 }
 
-.template {
+.templates-list a {
   width: 25%;
+}
+
+.template {
+  width: 100%;
   padding: 0;
   background: url("http://image.slidesharecdn.com/defa8171-e72a-4acd-93fa-db40d943e71f-150227034518-conversion-gate01/95/cva4-1-638.jpg?cb=1425030336");
   background-size: contain;
