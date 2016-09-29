@@ -45,10 +45,19 @@
       }
 
 
+      $view = 'views/profile.php';
+    } else {
+      $getItems = $connection->prepare('SELECT * FROM `concept` WHERE `user` = :user');
+      $getItems->bindValue(':user', $_SESSION['id'], PDO::PARAM_STR);
+
+      $getItems->execute();
+
+      $arr = $getItems->fetch(PDO::FETCH_ASSOC);
+      $arr = array_slice($arr, 2);
+      $view = 'views/profileSelf.php';
     }
 
 
-    $view = 'views/profile.php';
   } else {
     header('Location: login.php');
   }
