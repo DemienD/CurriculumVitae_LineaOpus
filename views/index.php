@@ -172,8 +172,6 @@
       </div>
     </div>
     <div class="row user-reviews">
-      <!-- <div class="trigger"><</div>
-      <div class="trigger">></div> -->
 
       <!-- CAROUEL OPINIONS -->
       <div class="carousel slide text-center" id="theCarousel" data-ride="carousel">
