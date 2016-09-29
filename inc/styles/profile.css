@@ -41,6 +41,17 @@ li.content {
   font-size: 1.4em;
   color: #000;
 }
+
+.profileThumb {
+  width: 50%;
+  height: auto;
+  display: inline-block;
+}
+
+
+li.header {
+  text-transform: capitalize;
+}
 #contImg {
   background-image: url("../../images/profile.jpg");
   background-position: center;
