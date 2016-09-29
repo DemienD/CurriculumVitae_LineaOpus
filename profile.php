@@ -54,7 +54,8 @@
       $getItems->execute();
 
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
-      $arr = array_slice($arr, 2);
+      $profileImage = $arr['image'];
+      $arr = array_slice($arr, 3);
       $view = 'views/profileSelf.php';
     }
 
