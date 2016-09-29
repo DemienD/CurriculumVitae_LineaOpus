@@ -11,145 +11,42 @@
 <div class="row">
   <div class="col-md-6">
     <h3>CV Concept</h2>
+      <ul>
+
       <?php
-      /*if($concept->concept == false) {
-        echo '<p>U heeft nog geen concept. U hebt een concept nodig om een CV te maken.</p>'."\n";
-        echo '<a href="/"><button type="button" class="wideButton">Maak er nu een!</button></a>';
-      } else {
-        echo "<ul class='hide'>";
-        $content = $concept->concept;
-        // echo "<ul class='concept'>";
-
-        $prevHeader = 'none';
-        foreach ($content as $key => $value) {
-          if($key !== "saveCV") {
-            $indexName = explode( '_', $key );
-            $header;
-            switch ($indexName[0]) {
-              case 'personal':
-                $header = 'Persoonlijke Info';
-                break;
-              case 'education':
-                $header = 'Opleidingen';
-                break;
-              case 'work':
-                $header = 'Werkervaring';
-                break;
-              case 'language':
-                $header = 'Taalkennis';
-                break;
-              case 'program':
-                $header = 'Softwarekennis';
-                break;
-              case 'license':
-                $header = 'Rijbewijzen';
-                break;
-              case 'programming':
-                $header = 'Programmeertalen';
-                break;
-              case 'project':
-                $header = 'Projecten';
-                break;
-              default:
-                $header = '';
-                break;
-            }
-
-            if($header !== $prevHeader) {
-              echo "</ul>";
-              echo "<ul class='concept'>";
-              echo "<h4>".$header."</h4>";
-              $prevHeader = $header;
-            }
-
-            if(is_array($value)) {
-              echo "<li class='key'>".$key;
-              echo "<ol>";
-
-              foreach ($value as $keyx => $valuex) {
-                echo "<li class='val'>" . $valuex . "</li>";
-              }
-              echo "</ol>";
-              echo "</li>";
-            } else {
-              echo "<li class='key'>".$key . "<li class='val'>" . $value . "</li></li>";
-            }
-          }
+      $prevKey = '';
+      foreach ($arr as $key => $value) {
+        $expKey = explode('_', $key);
+        if($prevKey === $expKey[0]){
+          $prevKey = $expKey[0];
+        } else {
+          echo "<li class='header'><h3>".$expKey[0]."</h3></li>";
+          $prevKey = $expKey[0];
         }
+        echo "<li class='title'>".$expKey[1]."</li>";
 
-        echo "</ul>";
-
-      }*/
-      if($concept->concept == false) {
-        echo '<p>U heeft nog geen concept. U hebt een concept nodig om een CV te maken.</p>'."\n";
-        echo '<a href="/"><button type="button" class="wideButton">Maak er nu een!</button></a>';
-      } else {
-        echo "<ul class='hide'>";
-        $content = $concept->concept;
-        // echo "<ul class='concept'>";
-
-        $prevHeader = 'none';
-        foreach ($content as $key => $value) {
-          if($key !== "saveCV") {
-            $indexName = explode( '_', $key );
-            $header;
-            switch ($indexName[0]) {
-              case 'personal':
-                $header = 'Persoonlijke Info';
-                break;
-              case 'education':
-                $header = 'Opleidingen';
-                break;
-              case 'work':
-                $header = 'Werkervaring';
-                break;
-              case 'language':
-                $header = 'Taalkennis';
-                break;
-              case 'program':
-                $header = 'Softwarekennis';
-                break;
-              case 'license':
-                $header = 'Rijbewijzen';
-                break;
-              case 'programming':
-                $header = 'Programmeertalen';
-                break;
-              case 'project':
-                $header = 'Projecten';
-                break;
-              default:
-                $header = '';
-                break;
-            }
-
-            if($header !== $prevHeader) {
-              echo "</ul>";
-              echo "<ul class='concept'>";
-              echo "<h4>".$header."</h4>";
-              $prevHeader = $header;
-            }
-
-            if(is_array($value)) {
-              echo "<li class='key'>".$key;
-              echo "<ol>";
-
-              foreach ($value as $keyx => $valuex) {
-                echo "<li class='val'>" . $valuex . "</li>";
-              }
-              echo "</ol>";
-              echo "</li>";
-            } else {
-              echo "<li class='key'>".$key . "<li class='val'>" . $value . "</li></li>";
-            }
+        if(preg_match('/^a:\d+:{.*?}$/', $value)) {
+          $val = unserialize($value);
+          foreach ($val as $key => $value) {
+            echo "<li class='content'>".$value."</li>";
           }
+        } else {
+          echo "<li class='content'>".$value ."</li>";
         }
-
-        echo "</ul>";
-
       }
       ?>
+    </ul>
   </div>
   <div class="col-md-3">z</div>
-  <div class="col-md-3">z</div>
+  <div class="col-md-3">
+    <div class="jumbotron">
+      <h3>Profielfoto</h3>
+      <img class="profileThumb" src="<?php if(isset($profileImage)) { echo $profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
+      <input type="file" class="btn btn-primary btn-lg" role="button">Upload image</a>
+
+      <?php
+        $img = new Image($_FILES["fileToUpload"]);
+      ?>
+    </div>
+  </div>
 </div>
