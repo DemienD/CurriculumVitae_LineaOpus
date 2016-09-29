@@ -26,7 +26,6 @@
               <p>Exporteer je CV en start direct met solliciteren!</p>
             </li>
           </ul>
-          <a href=""><button class="wideButton">direct aan de slag</button></a>
         </div>
         <div class="col-lg-4 intro-card">
           <h2>Snel aan de slag</h2>
