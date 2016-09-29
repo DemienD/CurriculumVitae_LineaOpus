@@ -47,6 +47,7 @@
 
       $view = 'views/profile.php';
     } else {
+      include 'inc/classes/profileImage.php';
       $getItems = $connection->prepare('SELECT * FROM `concept` WHERE `user` = :user');
       $getItems->bindValue(':user', $_SESSION['id'], PDO::PARAM_STR);
 

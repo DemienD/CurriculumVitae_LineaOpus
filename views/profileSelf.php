@@ -42,10 +42,24 @@
     <div class="jumbotron">
       <h3>Profielfoto</h3>
       <img class="profileThumb" src="<?php if(isset($profileImage)) { echo $profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
-      <input type="file" class="btn btn-primary btn-lg" role="button">Upload image</a>
-
+      <form id="uploadImg" name="uploadImg" action="profile.php" enctype="multipart/form-data" method="post">
+        <label class="btn btn-default btn-file">
+          Upload een foto <input id="prfImg" name="prfImg" type="file" style="display: none;">
+        </label>
+      </form>
+      <script>
+        $( document ).ready(function(){
+          $("input:file").change(function (){
+            $('form').submit();
+          });
+        })
+      </script>
       <?php
-        $img = new Image($_FILES["fileToUpload"]);
+      if (isset($_FILES["prfImg"])) {
+        $img = new Image($_FILES["prfImg"]);
+      } else {
+        echo 'Nog geen foto';
+      }
       ?>
     </div>
   </div>
