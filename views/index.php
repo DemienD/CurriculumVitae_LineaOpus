@@ -38,7 +38,7 @@
               <li><input name="startform-email" id="startform-email" type="text" placeholder="Email"></li>
               <li>
                 <select required name="startform-sector" id="startform-sector" class="form-control">
-                  <option selected disabled>Select your option</option>
+                  <option selected disabled>Selecteer uw keuze</option>
                   <option value="1">Agrarisch &amp; Milieu</option>
                   <option value="2">Bouw</option>
                   <option value="3">Dieren &amp; Verzorging</option>
