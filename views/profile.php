@@ -6,6 +6,7 @@
         <small>Sign in om Demiën uw CV te laten maken!</small>
       </center>
     </h2>
+    <img class="profileImg" src="<?php if(isset($profileImage)) { echo '../../userImg/'.$profileImage; } else { echo '../../userImg/default.jpg'; }?>" alt="" />
   </div>
   <div class="col-md-3"></div>
   <div class="form">

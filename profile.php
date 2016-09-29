@@ -10,7 +10,7 @@
 
   if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     if(isset($_GET['user'])){
-      $getItems = $connection->prepare('SELECT `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
+      $getItems = $connection->prepare('SELECT `image`, `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
       $getItems->bindValue(':user', $_GET['user'], PDO::PARAM_STR);
       $getItems->execute();
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
@@ -18,6 +18,8 @@
       $firstname = $arr['personal_firstName'];
 
       $gender = $arr['personal_gender'];
+
+      $profileImage = $arr['image'];
 
       $age = $arr['personal_birthDay'];
       if(preg_match('/^a:\d+:{.*?}$/', $arr['education_education'])) {
