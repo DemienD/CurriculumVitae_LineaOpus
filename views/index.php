@@ -112,40 +112,48 @@
       </div>
       <div class="col-lg-7 templates-list">
         <div class="row">
-          <div id="XTI" class="col-lg-6 template">
-            <div>
-              <p>Alfredo</p>
-              <div id="Test">+</div>
-              <script type="text/javascript">
-                $(document).ready( function() {
-                  templateScale();
-                  $(window).resize( function() {
-                    templateScale()
+          <a href="#">
+            <div id="XTI" class="col-lg-6 template">
+              <div>
+                <p>Alfredo</p>
+                <div id="Test">+</div>
+                <script type="text/javascript">
+                  $(document).ready( function() {
+                    templateScale();
+                    $(window).resize( function() {
+                      templateScale()
+                    })
                   })
-                })
-              </script>
+                </script>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 template">
-            <div>
-              <p>Alfredo</p>
-              <div class="plus">+</div>
+          </a>
+          <a href="#">
+            <div class="col-lg-6 template">
+              <div>
+                <p>Alfredo</p>
+                <div class="plus">+</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="row">
-          <div class="col-lg-6 template">
-            <div>
-              <p>Alfredo</p>
-              <div class="plus">+</div>
+          <a href="#">
+            <div class="col-lg-6 template">
+              <div>
+                <p>Alfredo</p>
+                <div class="plus">+</div>
+              </div>
             </div>
-          </div>
-          <div class="col-lg-6 template">
-            <div>
-              <p>Alfredo</p>
-              <div class="plus">+</div>
+          </a>
+          <a href="#">
+            <div class="col-lg-6 template">
+              <div>
+                <p>Alfredo</p>
+                <div class="plus">+</div>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
