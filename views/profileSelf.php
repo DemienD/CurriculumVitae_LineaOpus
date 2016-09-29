@@ -41,7 +41,7 @@
   <div class="col-md-3">
     <div class="jumbotron">
       <h3>Profielfoto</h3>
-      <img class="profileThumb" src="<?php if(isset($profileImage)) { echo $profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
+      <img class="profileThumb" src="<?php if(isset($profileImage)) { echo '../../userImg/'.$profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
       <form id="uploadImg" name="uploadImg" action="profile.php" enctype="multipart/form-data" method="post">
         <label class="btn btn-default btn-file">
           Upload een foto <input id="prfImg" name="prfImg" type="file" style="display: none;">
@@ -56,9 +56,7 @@
       </script>
       <?php
       if (isset($_FILES["prfImg"])) {
-        $img = new Image($_FILES["prfImg"]);
-      } else {
-        echo 'Nog geen foto';
+        $img = new Image($_FILES["prfImg"], $_SESSION['id']);
       }
       ?>
     </div>
