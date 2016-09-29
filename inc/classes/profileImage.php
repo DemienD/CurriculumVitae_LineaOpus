@@ -1,9 +1,12 @@
 <?php
   class Image {
     public $image;
+    public $id;
     public $bericht = false;
 
-    function __construct($imagefile) {
+    function __construct($imagefile, $id) {
+      $this->id = $id;
+      $this->removeImage();
       if(isSet($imagefile) && $imagefile["error"] === 0) {
         // alles ging goed
         $name = $imagefile["name"];
@@ -29,7 +32,8 @@
           // afbeelding opslaan
           imagePNG($gd, $doel);
 
-          $image = $bestand;
+          $this->image = $bestand;
+          $this->saveToDatabase();
           $error = 0;
 
           // afbeelding weer sluiten
@@ -43,6 +47,45 @@
       } else {
         $image = "default.jpg";
         $error = 0;
+      }
+    }
+
+    private function removeImage() {
+      $conn = $this->establishConnection();
+      $query = $conn->prepare("SELECT `image` FROM `concept` WHERE `concept`.`user` = :id");
+      $query->bindValue(':id', $this->id, PDO::PARAM_STR);
+      try {
+        $query->execute();
+        $imagelink = $query->fetch(PDO::FETCH_ASSOC);
+      } catch (PDOexception $e) {
+      }
+      if($imagelink['image'] != '') {
+        unlink('userImg/'.$imagelink['image']);
+      }
+    }
+
+    private function saveToDatabase() {
+      $conn = $this->establishConnection();
+      $query = $conn->prepare("UPDATE `concept` SET `image` = :path WHERE `concept`.`user` = :id");
+      $query->bindValue(':path', $this->image, PDO::PARAM_STR);
+      $query->bindValue(':id', $this->id, PDO::PARAM_STR);
+
+      try {
+        $query->execute();
+      } catch (PDOexception $e) {
+
+      }
+
+    }
+
+    private function establishConnection() {
+      try {
+        $connection = new PDO("mysql:host=localhost;dbname=cvcreate-server", "cvcreate-server", "6WqtJLHm827nB96Z");
+        return $connection;
+      } catch (PDOexception $exception) {
+          $this->message .= "Connection to the database could not be established.";
+          return false;
+          exit;
       }
     }
 
