@@ -13,6 +13,16 @@ ul.concept {
   padding-right: 0;
 }
 
+.jumbotron {
+  transform: scale(.9);
+  text-align: center;
+}
+
+.jumbotron * {
+  word-wrap: break-word;
+  display: inline;
+}
+
 span.score {
   color: #888888;
   font-size: 1.3rem;
@@ -43,7 +53,8 @@ li.content {
 }
 
 .profileThumb {
-  width: 50%;
+  width: 70%;
+  padding: 5%;
   height: auto;
   display: inline-block;
 }

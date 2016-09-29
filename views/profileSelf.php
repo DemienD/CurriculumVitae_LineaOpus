@@ -39,6 +39,13 @@
   </div>
   <div class="col-md-3">z</div>
   <div class="col-md-3">
+    <script>
+    $( document ).ready(function(){
+      $("input:file").change(function (){
+        $('form').submit();
+      });
+    })
+    </script>
     <div class="jumbotron">
       <h3>Profielfoto</h3>
       <img class="profileThumb" src="<?php if(isset($profileImage)) { echo '../../userImg/'.$profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
@@ -47,13 +54,6 @@
           Upload een foto <input id="prfImg" name="prfImg" type="file" style="display: none;">
         </label>
       </form>
-      <script>
-        $( document ).ready(function(){
-          $("input:file").change(function (){
-            $('form').submit();
-          });
-        })
-      </script>
       <?php
       if (isset($_FILES["prfImg"])) {
         $img = new Image($_FILES["prfImg"], $_SESSION['id']);
