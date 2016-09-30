@@ -10,4 +10,7 @@
   $view = 'views/index.php';
 
   include $template;
+
+
+
 ?>
