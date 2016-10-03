@@ -5,47 +5,52 @@
   if (session_status() == PHP_SESSION_NONE) {
     session_start();
   }
-  $additionalCSS = ['profile'];
+  $additionalCSS = ['profile', 'bootstrap-switch'];
+  $additionalJS = ['bootstrap-switch.js'];
   $content = '';
 
   if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     if(isset($_GET['user'])){
-      $getItems = $connection->prepare('SELECT `image`, `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
+      $getItems = $connection->prepare('SELECT `image`, `public` `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
       $getItems->bindValue(':user', $_GET['user'], PDO::PARAM_STR);
       $getItems->execute();
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
+      if($arr['public']) {
+        $firstname = $arr['personal_firstName'];
 
-      $firstname = $arr['personal_firstName'];
+        $gender = $arr['personal_gender'];
 
-      $gender = $arr['personal_gender'];
+        $profileImage = $arr['image'];
 
-      $profileImage = $arr['image'];
+        $age = $arr['personal_birthDay'];
+        if(preg_match('/^a:\d+:{.*?}$/', $arr['education_education'])) {
+          $education = unserialize($arr['education_education']);
+        } else {
+          $education = $arr['education_education'];
+        }
 
-      $age = $arr['personal_birthDay'];
-      if(preg_match('/^a:\d+:{.*?}$/', $arr['education_education'])) {
-        $education = unserialize($arr['education_education']);
+        if(preg_match('/^a:\d+:{.*?}$/', $arr['work_function'])) {
+          $function = unserialize($arr['work_function']);
+        } else {
+          $work = $arr['work_function'];
+        }
+
+        if(preg_match('/^a:\d+:{.*?}$/', $arr['language_language'])) {
+          $language = unserialize($arr['language_language']);
+        } else {
+          $language = $arr['language_language'];
+        }
+
+        if(preg_match('/^a:\d+:{.*?}$/', $arr['language_skill'])) {
+          $skill = unserialize($arr['language_skill']);
+        } else {
+          $skill = $arr['language_skill'];
+        }
+
+        $message = false;
       } else {
-        $education = $arr['education_education'];
+        $message = true;
       }
-
-      if(preg_match('/^a:\d+:{.*?}$/', $arr['work_function'])) {
-        $function = unserialize($arr['work_function']);
-      } else {
-        $work = $arr['work_function'];
-      }
-
-      if(preg_match('/^a:\d+:{.*?}$/', $arr['language_language'])) {
-        $language = unserialize($arr['language_language']);
-      } else {
-        $language = $arr['language_language'];
-      }
-
-      if(preg_match('/^a:\d+:{.*?}$/', $arr['language_skill'])) {
-        $skill = unserialize($arr['language_skill']);
-      } else {
-        $skill = $arr['language_skill'];
-      }
-
 
       $view = 'views/profile.php';
     } else {
@@ -57,7 +62,10 @@
 
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
       $profileImage = $arr['image'];
-      $arr = array_slice($arr, 3);
+      $arr = array_slice($arr, 4);
+
+      print_r($_POST);
+
       $view = 'views/profileSelf.php';
     }
 

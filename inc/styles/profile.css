@@ -14,13 +14,16 @@ ul.concept {
 }
 
 .jumbotron {
-  transform: scale(.9);
   text-align: center;
 }
 
 .jumbotron * {
   word-wrap: break-word;
   display: inline;
+}
+
+.jumbotron .bootstrap-switch {
+  max-height: 70px;
 }
 
 span.score {

@@ -37,10 +37,26 @@
       ?>
     </ul>
   </div>
-  <div class="col-md-3">z</div>
+  <div class="col-md-3">
+    <div class="jumbotron">
+      <h3>Profielinstellingen</h3>
+      <br />
+      <form id="profilesettings" name="profilesettings" action="profile.php" method="post">
+        <label for="public">Openbaar profiel</label>
+        <br />
+        <input id="public" name="public" type="checkbox" checked data-size="large">
+        <input type="submit" name="submit" id="submit" value="Opslaan">
+      </form>
+    </div>
+  </div>
   <div class="col-md-3">
     <script>
     $( document ).ready(function(){
+      $.post('profile.php', {input: '8'});
+      $('input:checkbox').bootstrapSwitch();
+
+      var state = $('input:checkbox').bootstrapSwitch('state');
+
       $("input:file").change(function (){
         $('form').submit();
       });
