@@ -1,5 +1,6 @@
 <?php
   include 'inc/package.php';
+  include 'inc/connection.php';
 
   define('PAGE_TITLE', 'Home');
   if (session_status() == PHP_SESSION_NONE) {
@@ -7,25 +8,20 @@
   }
   $additionalCSS = ['landing'];
 
-  function establishConnection() {
-    try {
-      $connection = new PDO("mysql:host=localhost;dbname=cvcreate-server", "cvcreate-server", "6WqtJLHm827nB96Z");
-      return $connection;
-    } catch (PDOexception $exception) {
-        $this->message .= "Connection to the database could not be established.";
-        return false;
-        exit;
-    }
+  // get reviews from database
+  $getReview = $connection->prepare('SELECT `image`, `name`, `quote` FROM 'review'');
+  try (
+    $getReview->execute();
+  ) catch(PDOexception $e) {
+    echo 'Oops! Something went wrong!';
   }
+  // put result reviews in associative array
+  $reviewArr = $getReview->fetch(PDO::FETCH_ASSOC);
 
-  function addReview() {
-    $conn = $this->establishConnection();
-    if($conn !== false){
-
-    }
-  }
-
-
+  // variables for placing the items in view
+  $image = $reviewArr['image'];
+  $name  = $reviewArr['name'];
+  $quote = $reviewArr['quote'];
 
 
 
@@ -35,5 +31,4 @@
   $view = 'views/index.php';
 
   include $template;
-
 ?>
