@@ -11,11 +11,11 @@
 
   if(isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
     if(isset($_GET['user'])){
-      $getItems = $connection->prepare('SELECT `image`, `public` `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
-      $getItems->bindValue(':user', $_GET['user'], PDO::PARAM_STR);
+      $getItems = $connection->prepare('SELECT `image`, `public`, `personal_firstName`, `personal_gender`, `personal_birthDay`, `education_education`, `work_function`, `language_language`, `language_skill` FROM `concept` WHERE `user` = :user');
+      $getItems->bindValue(':user', $_GET['user'], PDO::PARAM_INT);
       $getItems->execute();
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
-      if($arr['public']) {
+      if($arr['public'] === "true") {
         $firstname = $arr['personal_firstName'];
 
         $gender = $arr['personal_gender'];
@@ -64,7 +64,31 @@
       $profileImage = $arr['image'];
       $arr = array_slice($arr, 4);
 
-      print_r($_POST);
+      function saveSetting($type, $value) {
+        include 'inc/connection.php';
+
+        $setSetting = $connection->prepare('UPDATE `concept` SET `public` = :value WHERE user = :id');
+        // $setSetting->bindValue(':type', $type, PDO::PARAM_STR);
+        $setSetting->bindValue(':value', $value, PDO::PARAM_STR);
+        $id = $_SESSION['id'];
+        $setSetting->bindValue(':id', $id, PDO::PARAM_STR);
+
+        try {
+          $setSetting->execute();
+        } catch (PDOexception $e) {
+
+        }
+
+      }
+
+      if(isset($_POST['submit'])) {
+        if(isset($_POST['public'])){
+          saveSetting('public', 'true');
+        } else {
+          saveSetting('public', 'false');
+        }
+      }
+
 
       $view = 'views/profileSelf.php';
     }
