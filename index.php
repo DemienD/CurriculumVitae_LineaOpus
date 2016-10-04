@@ -16,8 +16,7 @@
     echo 'Oops! Something went wrong!';
   }
   // put result reviews in associative array
-  $reviewArr = $getReview->fetch(PDO::FETCH_ASSOC);
-
+  $reviewArr = $getReview->fetchAll(PDO::FETCH_ASSOC);
 
   $view = 'views/index.php';
 
