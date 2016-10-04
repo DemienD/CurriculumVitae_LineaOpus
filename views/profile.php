@@ -84,7 +84,6 @@
         } else {
           echo "<h2><small>Unfortunately, this is a private profile...</small></h3>";
         }
-
       ?>
     </div>
   </div>
