@@ -50,15 +50,15 @@
     </div>
   </div>
   <div class="col-md-3">
-    <?php echo "<script>$( document ).ready(function(){ $('input:checkbox').bootstrapSwitch({state: ".$arr['public']."}); });</script>" ?>
+    <?php echo "<script>$( document ).ready(function(){ $('input:checkbox').bootstrapSwitch({state: ".$public."}); });</script>" ?>
     <script>
     $( document ).ready(function(){
       var state = $('input:checkbox').bootstrapSwitch('state');
 
       $("input:file").change(function (){
         $('form').submit();
-
-    })
+      });
+    });
     </script>
     <div class="jumbotron">
       <h3>Profielfoto</h3>
