@@ -173,7 +173,7 @@
     </div>
     <div class="row user-reviews">
 
-      <!-- CAROUEL OPINIONS -->
+      <!-- CAROUSEL OPINIONS -->
       <div class="carousel slide text-center" id="theCarousel" data-ride="carousel">
         <!-- bottom dots --> <!--
         <ol class="carousel-indicators">
@@ -183,63 +183,39 @@
           <li data-target="#theCarousel" data-slide-to="3"></li>
         </ol>  -->
 
-        <?php
-          //print_r($reviewArr);
-
-          for($i = 0; $i < count($reviewArr); $i+= 1) {
-            foreach($reviewArr[$i] as $key => $value) {
-              echo 'Key: '.$key.' & value: '.$value.'<br />';
-            }
-          }
-        /*
-
-          foreach($reviewArr as $key => $value){
-              echo $value;
-          } */
-        ?>
-
-        <!-- content voor carousel -->
         <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <!-- HIERIN MOET EEN IMAGE -->
-            <div class="profile" style="background: url('../../images/headshot.jpg');background-size: cover;"></div>
-            <p class="quote">
-              <em class="quote-l">
-                Donec lacinia imperdiet lacus viverra dignissim.
-                <!-- HIER MOET EEN QUOTE-->
-              </em>
-              <em class="quote-r">
-                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
-                  <!-- HIER EIGENLIJK OOK-->
-              </em>
-              <em class="author">L. Ipsum <!-- HIER MOET EEN AUTHOR--></em>
-            </p>
-          </div>
-          <div class="item">
-            <div class="profile" style="background: url('../../images/headshot2.jpg');background-size: cover;"></div>
-            <p class="quote">
-              <em class="quote-l">
-                Donec lacinia imperdiet lacus viverra dignissim.
-              </em>
-              <em class="quote-r">
-                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
-              </em>
-              <em class="author">D. Drost</em>
-            </p>
-          </div>
-          <div class="item">
-            <div class="profile" style="background: url('../../images/headshot3.jpg');background-size: cover;"></div>
-            <p class="quote">
-              <em class="quote-l">
-                Donec lacinia imperdiet lacus viverra dignissim.
-              </em>
-              <em class="quote-r">
-                  Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
-              </em>
-              <em class="author">J. Ribbers</em>
-            </p>
-          </div>
-        </div>
+        <?php
+
+        $count = 0;
+          for($i = 0; $i < count($reviewArr); $i+= 1) {
+            $count++;
+            foreach($reviewArr[$i] as $key => $value) {
+              if($key == 'image'){
+                $image = $value;
+              } elseif($key == 'name') {
+                $name = $value;
+              } elseif($key == 'quote'){
+                $quote = $value;
+              }
+              if($count == 1){
+                $active = ' active';
+              }
+              // echo de html-troep die Demien stuurde.
+              echo '<!-- content voor carousel -->
+                <div class="item'.$active.'">
+                  <div class="profile" style="background: url('.$image.');background-size: cover;"></div>
+                  <p class="quote">
+                    <em class="quote-l">
+                      '.$quote.'
+                    </em>
+                    <em class="author">
+                      '.$name.'</em>
+                  </p>
+                </div>';
+              }
+            }
+
+        ?>
 
         <!-- CONTROLS -->
         <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
@@ -251,10 +227,13 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
+    </div>
 
 
-<!--
-      <div class="profile"></div>
+
+
+    <!--<div class="item">
+      <div class="profile" style="background: url('../../images/headshot2.jpg');background-size: cover;"></div>
       <p class="quote">
         <em class="quote-l">
           Donec lacinia imperdiet lacus viverra dignissim.
@@ -262,6 +241,6 @@
         <em class="quote-r">
             Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
         </em>
-        <em class="author">L. Ipsum</em>
-      </p> -->
-    </div>
+        <em class="author">D. Drost</em>
+      </p>
+    </div>-->
