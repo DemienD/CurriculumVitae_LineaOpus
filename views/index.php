@@ -186,34 +186,60 @@
         <div class="carousel-inner" role="listbox">
         <?php
 
-        $count = 0;
-          for($i = 0; $i < count($reviewArr); $i+= 1) {
-            $count++;
-            foreach($reviewArr[$i] as $key => $value) {
-              if($key == 'image'){
-                $image = $value;
-              } elseif($key == 'name') {
-                $name = $value;
-              } elseif($key == 'quote'){
-                $quote = $value;
-              }
-              if($count == 1){
-                $active = ' active';
-              }
-              // echo de html-troep die Demien stuurde.
-              echo '<!-- content voor carousel -->
-                <div class="item'.$active.'">
-                  <div class="profile" style="background: url('.$image.');background-size: cover;"></div>
-                  <p class="quote">
-                    <em class="quote-l">
-                      '.$quote.'
-                    </em>
-                    <em class="author">
-                      '.$name.'</em>
-                  </p>
-                </div>';
-              }
+        /*
+        Array
+          (
+          [0] => Array
+          (
+              [image] => userImg\image_14754800715b7ac21269925333b37822cb343daa7866de052b.png
+              [name] => J. Ribbers
+              [quote] => Donec lacinia imperdiet lacus viverra dignissim.
+          Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+          )
+
+          [1] => Array
+          (
+              [image] => userImg\image_1475498502a3ccac314e2d473145c5fb029f335e22259f325e.png
+              [name] => H. Example
+              [quote] => There are no secrets to succes. It is the result
+          of preparation, hard work and learning from failure.
+          )
+
+          )
+        */
+
+        $activeToggle = true;
+        for($i = 0; $i < count($reviewArr); $i += 1) {
+          $image = ''; // declare the variabes so that the value will be stored during the foreach loop.
+          $name = ''; // declare the variabes so that the value will be stored during the foreach loop.
+          $quote = ''; // declare the variabes so that the value will be stored during the foreach loop.
+          $active = '';
+          foreach($reviewArr[$i] as $key => $value) {
+            if($key == 'image'){
+              $image = $value;
+            } elseif($key == 'name') {
+              $name = $value;
+            } elseif($key == 'quote'){
+              $quote = $value;
             }
+            if($activeToggle){
+              $active = ' active';
+              $activeToggle = false;
+            }
+          }
+          //echo the HTML geniousness Demien GAVE me
+          echo '<!-- content voor carousel -->
+          <div class="item'.$active.'">
+          <div class="profile" style="background: url(\'images/'.$image.'\');background-size: cover;"></div>
+          <p class="quote">
+          <em class="quote-l">
+          '.$quote.'
+          </em>
+          <em class="author">
+          '.$name.'</em>
+          </p>
+          </div>';
+        }
 
         ?>
 
