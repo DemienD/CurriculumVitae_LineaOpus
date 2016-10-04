@@ -183,18 +183,36 @@
           <li data-target="#theCarousel" data-slide-to="3"></li>
         </ol>  -->
 
+        <?php
+          //print_r($reviewArr);
+
+          for($i = 0; $i < count($reviewArr); $i+= 1) {
+            foreach($reviewArr[$i] as $key => $value) {
+              echo 'Key: '.$key.' & value: '.$value.'<br />';
+            }
+          }
+        /*
+
+          foreach($reviewArr as $key => $value){
+              echo $value;
+          } */
+        ?>
+
         <!-- content voor carousel -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
+            <!-- HIERIN MOET EEN IMAGE -->
             <div class="profile" style="background: url('../../images/headshot.jpg');background-size: cover;"></div>
             <p class="quote">
               <em class="quote-l">
                 Donec lacinia imperdiet lacus viverra dignissim.
+                <!-- HIER MOET EEN QUOTE-->
               </em>
               <em class="quote-r">
                   Sed ac tortor tincidunt orci ullamcorper elementum ut vel sapien.
+                  <!-- HIER EIGENLIJK OOK-->
               </em>
-              <em class="author">L. Ipsum</em>
+              <em class="author">L. Ipsum <!-- HIER MOET EEN AUTHOR--></em>
             </p>
           </div>
           <div class="item">
