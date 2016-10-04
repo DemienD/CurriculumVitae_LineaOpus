@@ -59,8 +59,8 @@
       $getItems->bindValue(':user', $_SESSION['id'], PDO::PARAM_STR);
 
       $getItems->execute();
-
       $arr = $getItems->fetch(PDO::FETCH_ASSOC);
+      $public = $arr['public'];
       $profileImage = $arr['image'];
       $arr = array_slice($arr, 4);
 
@@ -78,6 +78,7 @@
         } catch (PDOexception $e) {
 
         }
+        header("Location: profile.php");
 
       }
 
