@@ -17,7 +17,7 @@
     session_unset();
     session_destroy();
   }
-
+  
   if(isSet($_POST['login'])) {
     $error = '';
     $succes = '';
