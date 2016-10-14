@@ -24,6 +24,9 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700'>
     <link rel='stylesheet' href='inc/styles/main.css'>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <?php
       if(isset($additionalCSS)){
         foreach($additionalCSS as $styleSheet) {
