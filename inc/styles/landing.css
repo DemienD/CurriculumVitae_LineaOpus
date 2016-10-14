@@ -257,7 +257,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   font-size: 1.2rem!important;
-  display: block;
+  /*display: block;*/
 }
 
 .item .author, .quote-r {
@@ -277,17 +277,19 @@
   content: "- ";
 }
 
-.item .quote:before {
+.item .quote-l:before {
   content: '“';
-  position: absolute;
-  left: 20%;
+  /*position: relative;*/
+  display: inline-block;
+  /*left: 20%;*/
   line-height: 4rem;
 }
 
-.item .quote:after {
+.item .quote-l:after {
   content: '”';
-  position: absolute;
-  right: 20%;
+  /*position: relative;*/
+  display: inline-block;
+  /*right: 20%;*/
   line-height: 1rem;
 }
 
