@@ -43,6 +43,10 @@
     </title>
   </head>
   <body>
+    <?php
+      if(isset($_SESSION['loggedIn'])){
+        ?>
+        <!--                     Menu ingelogd                     -->
         <nav class="navbar navbar-default">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -51,7 +55,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
+              <a class="navbar-brand" href="/"><h1><img class='logo' src="images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
               <script type="text/javascript">
                 function templateScale(){
                   var temWidth = $('#XTI').width();
@@ -76,26 +80,60 @@
                 <li><a href="#">Over ons</a></li>
                 <li><a href="#">Voorwaarden</a></li>
                 <li><a href="#">Contact</a></li>
-                <?php
-                  if(isset($_SESSION['loggedIn'])){
-                ?>
-                <li><a href="/login.php?logout=1">Uitloggen</a></li>
-                <?php
-                  } else{
-                ?>
-                <li><a href="/login.php">Log in</a></li>
-                <li><a href="/registration.php">Registreer</a></li>
-                <?php
-                  }
-                ?>
+                <li><a href="login.php?logout=1">Uitloggen</a></li>
               </ul>
             </div>
           </div>
         </nav>
         <div class="container-fluid" style="min-height: 90vh; padding: 0; margin: 0;">
 
+        <?php
+      } else {
+    ?>
+    <!--                     Menu niet-ingelogd                     -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsed-navbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><h1><img class='logo' src="images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
+          <script type="text/javascript">
+            function templateScale(){
+              var temWidth = $('#XTI').width();
+              console.log(temWidth);
+              var temHeight = temWidth * 1.4153605015673981191222570532915;
+
+              $('.template').height(temHeight);
+              $('#Test, .plus').width($('#Test').height());
+            }
+            $(document).ready( function() {
+             var logoheight = $('.logo').height();
+             var navHeight = $('#collapsed-navbar').height();
+             var padding = (navHeight - logoheight)/6;
+             $('.logo').css('margin-bottom', padding);
+            })
+          </script>
+        </div>
+        <div class="collapse navbar-collapse" id="collapsed-navbar">
+          <ul class="nav navbar-right">
+            <li class="current"><a href="/">Home</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Voorwaarden</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="login.php">Log in</a></li>
+            <li><a href="registration.php">Registreer</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" style="min-height: 90vh; padding: 0; margin: 0;">
     <!-- Start content -->
     <?php
+    }
       if(isset($view)){
         require_once $view;
       } else {

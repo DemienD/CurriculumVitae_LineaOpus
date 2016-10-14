@@ -62,7 +62,7 @@
     </script>
     <div class="jumbotron">
       <h3>Profielfoto</h3>
-      <img class="profileThumb" src="<?php if(isset($profileImage)) { echo '../../userImg/'.$profileImage; } else { echo "../../userImg/default.jpg"; } ?>" alt="" />
+      <img class="profileThumb" src="<?php if(isset($profileImage)) { echo 'userImg/'.$profileImage; } else { echo "userImg/default.jpg"; } ?>" alt="" />
       <form id="uploadImg" name="uploadImg" action="profile.php" enctype="multipart/form-data" method="post">
         <label class="btn btn-default btn-file">
           Upload een foto <input id="prfImg" name="prfImg" type="file" style="display: none;">
