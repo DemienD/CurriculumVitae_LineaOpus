@@ -52,7 +52,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
+              <a class="navbar-brand" href="/"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
               <script type="text/javascript">
                 function templateScale(){
                   var temWidth = $('#XTI').width();
@@ -96,7 +96,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
+          <a class="navbar-brand" href="/"><h1><img class='logo' src="../images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
           <script type="text/javascript">
             function templateScale(){
               var temWidth = $('#XTI').width();
