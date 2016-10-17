@@ -59,7 +59,7 @@
 
     if($complete == true){
       $newUser = new User(true, $areSet);
-      $succes .= 'U bent geregistreerd!';
+      $succes .= 'Er is een bevestigingsmail naar uw email verzonden.';
     }
   }
 

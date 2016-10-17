@@ -23,6 +23,10 @@
         if(isset($succes)){
           echo $succes;
         }
+
+        if(!isset($succes)){
+
+
       ?></h4>
       <form action="registration.php" method="post" class="regisForm">
         <input type="text" name="username" placeholder="Gebruikersnaam" required>
@@ -39,6 +43,9 @@
         <br />
         <input type="submit" value="Registreer!" name="register" id="register">
       </form>
+      <?php
+    }
+    ?>
     </div>
   </div>
   <div class="col-md-3">
