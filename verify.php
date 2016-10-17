@@ -7,6 +7,7 @@
   }
   $additionalCSS = ['login'];
 
+
   function verify($code, $email){
     include 'inc/connection.php';
     $verifyUser = $connection->prepare('SELECT id FROM users WHERE verified = :code AND email = :email;');
@@ -30,12 +31,10 @@
       try {
         $setVerified->execute();
       } catch (PDOexception $e){
-        echo 'Something went wrong';
-        exit;
+        $error = 'Something went wrong';
       }
-      echo "Your account has ben verified!";
     } else {
-      echo 'Fout emailadress of verificatiecode.';
+      $error = 'Fout emailadress of verificatiecode.';
     }
   }
 

@@ -20,17 +20,13 @@
         if(isSet($succes)){
           echo $succes;
         }
-
-        if(isset($logUser->message)){
-          echo $logUser->message;
-        }
         ?>
       </h4>
       <form action="verify.php" method="post" class="loginForm">
         <input type="text" name="code" placeholder="Verificatiecode" required>
         <br />
         <br />
-        <input type="text " name="email" placeholder="Email" required>
+        <input type="text" name="email" placeholder="Email" required>
         <br />
         <br />
         <input type="submit" value="Verifieer" name="verify" id="verify">
