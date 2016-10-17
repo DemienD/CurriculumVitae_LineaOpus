@@ -198,14 +198,15 @@
           //echo the HTML geniousness Demien GAVE me
           echo '<!-- content voor carousel -->
           <div class="item'.$active.'">
-          <div class="profile" style="background: url(\'images/'.$image.'\');background-size: cover;"></div>
-          <p class="quote">
-          <em class="quote-l">
-          '.$quote.'
-          </em>
-          <em class="author">
-          '.$name.'</em>
-          </p>
+            <div class="profile" style="background: url(\'images/'.$image.'\');background-size: cover;"></div>
+            <p class="quote">
+              <em class="quote-l">
+                '.$quote.'
+              </em>
+              <em class="author">
+                '.$name.'
+              </em>
+            </p>
           </div>';
         }
 
