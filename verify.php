@@ -31,7 +31,7 @@
       try {
         $setVerified->execute();
       } catch (PDOexception $e){
-        $error = 'Something went wrong';
+        $error .= 'Something went wrong'."\n";
       }
     } else {
       $error = 'Fout emailadress of verificatiecode.';

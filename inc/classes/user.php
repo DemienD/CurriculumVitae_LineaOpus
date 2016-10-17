@@ -15,7 +15,7 @@
       $this->message .= 'Error '.$e;
     }
     $password = $results['password'];
-    $email = $results['email-host'];
+    $email_host = $results['email-host'];
     $mask = $results['mask'];
 
     $mail = new PHPMailer();
@@ -23,7 +23,7 @@
     $mail->CharSet =  "utf-8";
     $mail->IsSMTP();
     $mail->SMTPAuth = true;
-    $mail->Username = $email;
+    $mail->Username = $email_host;
     $mail->Password = $password;
     $mail->SMTPSecure = "ssl";
     $mail->Host = "smtp.gmail.com";
