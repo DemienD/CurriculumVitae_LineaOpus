@@ -310,6 +310,10 @@
   }
 }
 
+div.item {
+  padding-bottom: 3rem;
+}
+
 @media only screen and (max-width: 426px) {
   .item .quote:after, .item .quote:before {
     content: '';
