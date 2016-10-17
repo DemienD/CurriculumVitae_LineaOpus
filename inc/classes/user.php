@@ -193,8 +193,6 @@
             if($matches != 1) {
               $this->message .= 'Invalid password/email';
               header('Location: login.php');
-
-              exit;
             } else {
               $checkLogin = $conn->prepare("SELECT `id`, `username`, `verified` FROM `users` WHERE `email` = :email");
               $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
