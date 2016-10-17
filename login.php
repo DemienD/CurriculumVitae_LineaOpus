@@ -17,7 +17,7 @@
     session_unset();
     session_destroy();
   }
-  
+
   if(isSet($_POST['login'])) {
     $error = '';
     $succes = '';
@@ -48,14 +48,14 @@
           if(isset($_POST['email']) && isset($_POST['password'])){
             $logUser = new User(false, $areSet);
             $succes = 'U bent succesvol ingelogd.';
-            header('Location: /');
+            // header('Location: ./');
           }
         }
       } else {
         if(isset($_POST['email']) && isset($_POST['password'])){
           $logUser = new User(false, $areSet);
           $succes = 'U bent succesvol ingelogd.';
-          header('Location: /');
+          // header('Location: ./');
         }
       }
 

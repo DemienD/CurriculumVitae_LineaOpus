@@ -2,6 +2,52 @@
   /**
    *
    */
+  function sendVerification($code, $username, $email) {
+    require "PHPMailer/PHPMailerAutoload.php";
+    require "/../connection.php";
+
+    $getEmail = $connection->prepare("SELECT * FROM `email` WHERE `id` = :id");
+    $getEmail->bindValue(':id', 1, PDO::PARAM_INT);
+    try{
+      $getEmail->execute();
+      $results = $getEmail->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOexception $e) {
+      $this->message .= 'Error '.$e;
+    }
+    $password = $results['password'];
+    $email = $results['email-host'];
+    $mask = $results['mask'];
+
+    $mail = new PHPMailer();
+
+    $mail->CharSet =  "utf-8";
+    $mail->IsSMTP();
+    $mail->SMTPAuth = true;
+    $mail->Username = $email;
+    $mail->Password = $password;
+    $mail->SMTPSecure = "ssl";
+    $mail->Host = "smtp.gmail.com";
+    $mail->Port = "465";
+
+    $mail->setFrom($mask, 'no-reply');
+    $mail->AddAddress($email, $username);
+
+    $mail->Subject  =  'CVCreate | Activate your account.';
+    $mail->IsHTML(true);
+    $mail->Body    = 'Hi there '.$username.',<br />You are only seconds away from using your new account on <a href="cvcreate.nl">CVCreate</a>.<br /><strong>Activate your account now using </strong><a href="cvcreate.nl/verify.php?code='.$code.'&email='.$email.'">this link</a><br /> Or fill out this code <em>'.$code.'</em> on <a href="cvcreate.nl/verify.php">CVCreate</a>';
+
+
+    if($mail->Send())
+    {
+      echo "Message was Successfully Send :)";
+    }
+    else
+    {
+      echo "Mail Error - >".$mail->ErrorInfo;
+    }
+  }
+
+
   class User {
     public $username;
     public $email;
@@ -78,6 +124,10 @@
       }
     }
 
+    private function verification() {
+      return substr(md5(uniqid(rand(), true)), 8, 8);
+    }
+
     private function addUser() {
       $conn = $this->establishConnection();
       if($conn !== false) {
@@ -93,19 +143,23 @@
         if($matches !== 0) {
           $this->message .= "This email and/or username already exists."."\n";
         } else {
-          $insertUser = $conn->prepare("INSERT INTO `users` (`username`, `email`, `password`, `password_hash`) VALUES (:username, :email, :password, :passwordHash)");
+          $insertUser = $conn->prepare("INSERT INTO `users` (`username`, `email`, `password`, `password_hash`, `verified`) VALUES (:username, :email, :password, :passwordHash, :verification)");
           $insertUser->bindValue(':username', $this->username, PDO::PARAM_STR);
           $insertUser->bindValue(':email', $this->email, PDO::PARAM_STR);
 
           $password = $this->hash($this->password); //hashed password
           $insertUser->bindValue(':password', $password, PDO::PARAM_STR);
           $insertUser->bindValue(':passwordHash', $this->passwordHash, PDO::PARAM_STR);
+          $verify = $this->verification();
+          $insertUser->bindValue(':verification', $verify, PDO::PARAM_STR);
 
           try{
             $insertUser->execute();
           } catch (PDOexception $error) {
             $this->message .= "Something went wrong: ".$error."\n";
+            exit;
           }
+          sendVerification($verify, $this->username, $this->email);
         }
       }
     }
@@ -123,7 +177,7 @@
           }
           $this->passwordHash = $results['password_hash'];
 
-          if($passwordHash !== '') {
+          if($this->passwordHash !== '') {
             $checkUser = $conn->prepare("SELECT `email`, `password` FROM `users` WHERE `email` = :email AND `password` = :password");
             $checkUser->bindValue(':email', $this->email, PDO::PARAM_STR);
 
@@ -142,7 +196,7 @@
 
               exit;
             } else {
-              $checkLogin = $conn->prepare("SELECT `id`, `username` FROM `users` WHERE `email` = :email");
+              $checkLogin = $conn->prepare("SELECT `id`, `username`, `verified` FROM `users` WHERE `email` = :email");
               $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
               try {
                 $checkLogin->execute();
@@ -154,6 +208,10 @@
               $_SESSION['loggedIn'] = true;
               $_SESSION['id']       = $result['id'];
               $_SESSION['username'] = $this->username;
+              if(!$result['verified']) {
+                header('Location: verify.php');
+                exit;
+              }
             }
           } // hash check
         } // connectioncheck
@@ -162,8 +220,4 @@
 
 
   }
-  //
-  // $properties = ['username' => 'demien', 'email' => 'demien', 'password' => 'demien'];
-  // $x = new User(true, $properties);
-  // $x->hash('demien');
 ?>
