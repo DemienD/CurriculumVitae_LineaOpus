@@ -202,8 +202,8 @@ input[type=text], input[type=password], select {
   font-size: 1rem;
   width: 100%;
   color: #666;
-  padding: 1.5rem;
-  margin: .5rem auto;
+  padding: 0.5rem;
+  margin: 1rem auto;
 }
 
 input[type=submit], .wideButton {

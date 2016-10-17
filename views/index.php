@@ -36,31 +36,6 @@
               <li><input name="startform-lastname" id="startform-lastname" type="text" placeholder="Achternaam"></li>
               <li><input name="startform-dob" id="startform-dob" type="text" placeholder="Geboortedatum"></li>
               <li><input name="startform-email" id="startform-email" type="text" placeholder="Email"></li>
-              <li>
-                <select required name="startform-sector" id="startform-sector" class="form-control">
-                  <option selected disabled>Selecteer uw keuze</option>
-                  <option value="1">Agrarisch &amp; Milieu</option>
-                  <option value="2">Bouw</option>
-                  <option value="3">Dieren &amp; Verzorging</option>
-                  <option value="4">Finance</option>
-                  <option value="5">Fashion &amp; Styling</option>
-                  <option value="6">Gezondheidszorg &amp; Farmacie</option>
-                  <option value="7">Handel/Groothandel/Detailhandel</option>
-                  <option value="8">Horeca</option>
-                  <option value="9">ICT</option>
-                  <option value="10">Industrie/Productie</option>
-                  <option value="11">Juridisch</option>
-                  <option value="12">Kunst, Cultuur &amp; Entertainment</option>
-                  <option value="13">Life Sciences</option>
-                  <option value="14">Marketing &amp; Communicatie</option>
-                  <option value="15">Media &amp; Journalistiek</option>
-                  <option value="16">Onderwijs</option>
-                  <option value="17">Reizen &amp; Recreatie</option>
-                  <option value="18">Techiek</option>
-                  <option value="19">Transport &amp; Logistiek</option>
-                  <option value="20">Zakelijke dienstverlening</option>
-                </select>
-              </li>
             </ul>
             <input type="submit" name="submitCV" id="submitCV" value="Maak uw CV">
         </form>
@@ -70,11 +45,11 @@
           <p>Ben jij op zoek naar werk? Wil je ergens solliciteren maar heb je nog geen CV om op te sturen?
           CVCreate helpt je daarbij! Kijk hieronder eens naar onze CV mogelijkheden, lees de Tips &amp; Tricks of bekijk wat vacatures!</p>
           <ul class="intro-steps links">
-            <li><a href="#">Templates</a></li>
-            <li><a href="#">Tips &amp; tricks</a></li>
-            <li><a href="#">Kosten</a></li>
-            <li><a href="#">Vacatures</a></li>
-            <li><a href="#">Voorwaarden</a></li>
+            <li><a href="#">&gt; Templates</a></li>
+            <li><a href="#">&gt; Tips &amp; tricks</a></li>
+            <li><a href="#">&gt; Kosten</a></li>
+            <li><a href="#">&gt; Vacatures</a></li>
+            <li><a href="#">&gt; Voorwaarden</a></li>
           </ul>
         </div>
       </div>
@@ -101,13 +76,6 @@
         <p>Nulla facilisi. Morbi interdum mauris in viverra gravida. Nunc sit amet viverra enim, ac sodales turpis. Suspendisse sit amet arcu nec enim hendrerit sodales ac sed erat. Sed feugiat erat sit amet bibendum lacinia. Nam mattis interdum magna a viverra.</p>
         <p>Curabitur pretium est tellus, eu mollis felis eleifend ac. Quisque nec massa sed diam luctus condimentum. Praesent mollis neque arcu, ac auctor libero vulputate sed. Vivamus id velit sapien. Aenean sit amet semper sapien, non placerat erat. Quisque pretium, dolor non pulvinar iaculis, augue lectus dictum leo, at cursus nunc ante ac dolor.</p>
 
-        <select name="categorie" id="categorie" class="form-control">
-          <option value="">Categorie</option>
-          <option value="">Categorie</option>
-          <option value="">Categorie</option>
-          <option value="">Categorie</option>
-          <option value="">Categorie</option>
-        </select>
         <a href="#"><button class="wideButton">Bekijk alle templates</button></a>
       </div>
       <div class="col-lg-7 templates-list">

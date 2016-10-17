@@ -61,8 +61,8 @@
 
 }
 
-.intro-steps.links li {
-  padding: 15px;
+.intro-steps.links li a {
+  color: #12b287;
 }
 
 
