@@ -30,10 +30,10 @@
       if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) == true){
         $areSet['email'] = $_POST['email'];
       } else {
-        $error .= 'Email is ongeldig. Vul a.u.b. een geldig email adres in.';
+        $error .= 'Email is ongeldig. Vul a.u.b. een geldig email adres in. ';
       }
     } else {
-      $error .= 'Email is een vereist veld. Vul deze a.u.b. in.';
+      $error .= 'Email is een vereist veld. Vul deze a.u.b. in. ';
     }
     if(isSet($_POST['password'])){
       $areSet['password'] = $_POST['password'];
@@ -47,7 +47,6 @@
         if($_SESSION['loggedIn']){
           if(isset($_POST['email']) && isset($_POST['password'])){
             $logUser = new User(false, $areSet);
-            $succes = 'U bent succesvol ingelogd.';
             // header('Location: ./');
           }
         }
@@ -55,7 +54,7 @@
         if(isset($_POST['email']) && isset($_POST['password'])){
           $logUser = new User(false, $areSet);
           $succes = 'U bent succesvol ingelogd.';
-          // header('Location: ./');
+
         }
       }
 

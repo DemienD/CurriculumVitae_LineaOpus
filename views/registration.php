@@ -8,26 +8,26 @@
     </h2>
   </div>
 </div>
-  <div class="col-md-3"></div>
-  <div class="form">
-    <div class="col-md-6">
-      <h4><?php
-        if(isset($newUser->message)){
-          echo $newUser->message;
-        }
+<div class="col-md-3"></div>
+<div class="form">
+  <div class="col-md-6">
+    <h4><?php
+      if(isset($newUser->message)){
+        echo $newUser->message;
+      }
 
-        if(isset($error)){
-          echo $error;
-        }
+      if(isset($error)){
+        echo $error;
+      }
 
-        if(isset($succes)){
-          echo $succes;
-        }
+      if(isset($succes)){
+        echo $succes;
+      }
 
-        if(!isset($succes)){
+      if(!isset($succes)){
 
 
-      ?></h4>
+    ?></h4>
       <form action="registration.php" method="post" class="regisForm">
         <input type="text" name="username" placeholder="Gebruikersnaam" required>
         <br />
