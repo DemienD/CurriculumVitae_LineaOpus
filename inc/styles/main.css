@@ -8,7 +8,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
-  color: #12b287;
+  color: #1f8069;
 }
 
 h1 {
@@ -257,7 +257,7 @@ select {
   width: 150%;
   height: 10vh;
   padding: 2%;
-  background: #29BA93;
+  background: #1f8069;
   color: #fff;
   clear: both;
 }

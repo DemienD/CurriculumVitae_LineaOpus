@@ -64,7 +64,7 @@
 }
 
 .intro-steps.links li a {
-  color: #12b287;
+  color: #1f8069;
 }
 
 .stats-section {
@@ -104,7 +104,7 @@
 
 .quote {
   font-family: 'impact', sans-serif;
-  color: #12b287;
+  color: #1f8069;
   font-size: 10em;
   width: 100%;
 }
@@ -227,11 +227,11 @@
 }
 
 .carousel-indicators li {
-  border-color: #12b287;
+  border-color: #1f8069;
 }
 
 .carousel-indicators li.active {
-  background-color: #12b287;
+  background-color: #1f8069;
 }
 
 .carousel-inner {
@@ -248,7 +248,7 @@
 
 .item .quote {
   font-family: 'impact', sans-serif;
-  color: #12b287;
+  color: #1f8069;
   /*font-size: 5em;*/
   width: 100%:
 }
