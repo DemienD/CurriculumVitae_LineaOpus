@@ -191,8 +191,8 @@
               $this->message .= 'Error '.$e;
             }
             if($matches != 1) {
-              $this->message .= 'Invalid password/email';
-              header('Location: login.php');
+              $this->message .= 'Ongeldig wachtwoord/email.';
+              //header('Location: login.php');
             } else {
               $checkLogin = $conn->prepare("SELECT `id`, `username`, `verified` FROM `users` WHERE `email` = :email");
               $checkLogin->bindValue(':email', $this->email, PDO::PARAM_STR);
