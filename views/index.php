@@ -4,7 +4,7 @@
         <div class="col-lg-4 intro-card">
           <h2>Hoe werkt CVCreate?</h2>
           <p>Volg de stappen en creëer je CV!</p>
-          
+
         </div>
         <div class="col-lg-4 intro-card">
           <h2>Snel aan de slag</h2>
@@ -52,55 +52,11 @@
       <div class="col-lg-4 templates-support">
         <h2>CV Templates</h2>
         <p>Sed imperdiet lobortis nisl, sed semper dolor lacinia rutrum. Morbi eu magna nulla. Proin dapibus dolor maximus, viverra ipsum sed, porta augue. Nunc a arcu pulvinar, dignissim erat id, efficitur diam.</p>
-        <p>Nulla facilisi. Morbi interdum mauris in viverra gravida. Nunc sit amet viverra enim, ac sodales turpis. Suspendisse sit amet arcu nec enim hendrerit sodales ac sed erat. Sed feugiat erat sit amet bibendum lacinia. Nam mattis interdum magna a viverra.</p>
-        <p>Curabitur pretium est tellus, eu mollis felis eleifend ac. Quisque nec massa sed diam luctus condimentum. Praesent mollis neque arcu, ac auctor libero vulputate sed. Vivamus id velit sapien. Aenean sit amet semper sapien, non placerat erat. Quisque pretium, dolor non pulvinar iaculis, augue lectus dictum leo, at cursus nunc ante ac dolor.</p>
 
         <a href="#"><button class="wideButton">Bekijk alle templates</button></a>
       </div>
       <div class="col-lg-7 templates-list">
         <div class="row">
-          <a href="#">
-            <div id="XTI" class="col-lg-6 template">
-              <div>
-                <p>Alfredo</p>
-                <div id="Test">+</div>
-                <script type="text/javascript">
-                  $(document).ready( function() {
-                    templateScale();
-                    $(window).resize( function() {
-                      templateScale()
-                    })
-                  })
-                </script>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="col-lg-6 template">
-              <div>
-                <p>Alfredo</p>
-                <div class="plus">+</div>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="#">
-            <div class="col-lg-6 template">
-              <div>
-                <p>Alfredo</p>
-                <div class="plus">+</div>
-              </div>
-            </div>
-          </a>
-          <a href="#">
-            <div class="col-lg-6 template">
-              <div>
-                <p>Alfredo</p>
-                <div class="plus">+</div>
-              </div>
-            </div>
-          </a>
         </div>
       </div>
     </div>
