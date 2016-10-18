@@ -110,6 +110,7 @@ nav .container-fluid {
     margin-left: -10vw !important;
     margin-right: -10vw !important;
     padding-left: 5vw !important;
+    overflow: hidden;
   }
 
   .navbar-fixed-top {
@@ -157,6 +158,9 @@ nav .container-fluid {
     background-color: #ffffff !important;
   }
 
+  nav .container-fluid {
+    background-color: #88d8c3;
+  }
 }
 
 @media only screen and (min-width:769px){
