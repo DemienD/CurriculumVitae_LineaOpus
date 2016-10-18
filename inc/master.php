@@ -16,8 +16,8 @@
     <?php
       if(isset($additionalJS)){
         foreach($additionalJS as $script) {
-        echo '<script type="text/javascript" src="inc/scripts/'.$script.'"></script>';
-      }
+          echo '<script type="text/javascript" src="inc/scripts/'.$script.'"></script>';
+        }
       }
     ?>
 
@@ -34,12 +34,14 @@
         }
       }
     ?>
-    <title><?php
+    <title>
+    <?php
       if(defined('PAGE_TITLE')){
         echo PAGE_TITLE . " | CVCreate";
       } else {
         echo "CVCreate";
-      }; ?>
+      };
+    ?>
     </title>
   </head>
   <body>
@@ -51,23 +53,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"><h1><img class='logo' src="images/Logo-blanc.png" alt=""><span id="notShow">CVCreate.nl</span></h1></a>
+          <a class="navbar-brand" href="/">
+            <h1>
+              <img class='logo' src="images/Logo-blanc.png" alt="">
+              <span id="notShow">CVCreate.nl</span>
+            </h1>
+          </a>
           <script type="text/javascript">
-            function templateScale(){
-              var temWidth = $('#XTI').width();
-              console.log(temWidth);
-              var temHeight = temWidth * 1.4153605015673981191222570532915;
+          function templateScale(){
+            var temWidth = $('#XTI').width();
+            console.log(temWidth);
+            var temHeight = temWidth * 1.4153605015673981191222570532915;
 
-              $('.template').height(temHeight);
-              $('#Test, .plus').width($('#Test').height());
-            }
+            $('.template').height(temHeight);
+            $('#Test, .plus').width($('#Test').height());
+          }
 
-            $(document).ready( function() {
-              var logoheight = $('.logo').height();
-              var navHeight = $('#collapsed-navbar').height();
-              var padding = (navHeight - logoheight)/6;
-              $('.logo').css('margin-bottom', padding);
-            })
+          $(document).ready( function() {
+            var logoheight = $('.logo').height();
+            var navHeight = $('#collapsed-navbar').height();
+            var padding = (navHeight - logoheight)/6;
+            $('.logo').css('margin-bottom', padding);
+          });
           </script>
         </div>
         <div class="collapse navbar-collapse" id="collapsed-navbar">
@@ -80,12 +87,12 @@
             <?php
               if(isset($_SESSION['loggedIn'])){
             ?>
-                <li><a href="login.php?logout=1">Uitloggen</a></li>
+            <li><a href="login.php?logout=1">Uitloggen</a></li>
             <?php
               } else{
             ?>
-                <li><a href="login.php">Log in</a></li>
-                <li><a href="registration.php">Registreer</a></li>
+            <li><a href="login.php">Log in</a></li>
+            <li><a href="registration.php">Registreer</a></li>
             <?php
               }
             ?>
@@ -112,3 +119,7 @@
     </div>
   </body>
 </html>
+
+<!--
+
+-->
