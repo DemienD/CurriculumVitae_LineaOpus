@@ -47,14 +47,14 @@
         if($_SESSION['loggedIn']){
           if(isset($_POST['email']) && isset($_POST['password'])){
             $logUser = new User(false, $areSet);
-            // header('Location: ./');
+            header('Location: ./');
           }
         }
       } else {
         if(isset($_POST['email']) && isset($_POST['password'])){
           $logUser = new User(false, $areSet);
           $succes = 'U bent succesvol ingelogd.';
-
+          header('Location: ./');
         }
       }
 
