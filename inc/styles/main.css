@@ -221,6 +221,13 @@ input[type=submit], .wideButton {
   height: 45px;
   margin: 6.5px auto;
   line-height: 45px;
+  transition: all 0.1s ease-in;
+}
+
+input[type=submit]:hover, .wideButton:hover{
+  color: #ff4f1a;
+  background-color: transparent;
+  border: solid 2px #ff4f1a;
 }
 
 select {
