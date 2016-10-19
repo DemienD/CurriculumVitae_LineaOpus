@@ -4,6 +4,50 @@
         <div class="col-lg-4 intro-card">
           <h2>Hoe werkt CVCreate?</h2>
           <p>Volg de stappen en creëer je CV!</p>
+          <div id="stepsCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#stepsCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#stepsCarousel" data-slide-to="1"></li>
+              <li data-target="#stepsCarousel" data-slide-to="2"></li>
+              <li data-target="#stepsCarousel" data-slide-to="3"></li>
+              <li data-target="#stepsCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="images/steps/1.png" alt="Step 1">
+                <center>
+                  <h4><span class="badge">1</span> Voer je gegevens in om te beginnen met het maken van jou CV</h4>
+                </center>
+              </div>
+              <div class="item">
+                <img src="images/steps/2.png" alt="Step 2">
+                <center>
+                  <h4><span class="badge">2</span> Kies de elementen en gegevens die jij toe wilt voegen</h4>
+                </center>
+              </div>
+              <div class="item">
+                <img src="images/steps/3.png" alt="Step 3">
+                <center>
+                  <h4><span class="badge">3</span> Kies het design dat<br />bij jou past</h4>
+                </center>
+              </div>
+              <div class="item">
+                <img src="images/steps/4.png" alt="Step 4">
+                <center>
+                  <h4><span class="badge">4</span> Koop uw CV<br />via PayPal</h4>
+                </center>
+              </div>
+              <div class="item">
+                <img src="images/steps/5.png" alt="Step 5">
+                <center>
+                  <h4><span class="badge">5</span> Download en print je CV en start met soliciteren</h4>
+                </center>
+              </div>
+            </div>
+          </div>
 
         </div>
         <div class="col-lg-4 intro-card">
