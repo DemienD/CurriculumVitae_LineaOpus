@@ -77,7 +77,7 @@
           <ul class="intro-steps links">
             <li><a href="#"><i class="material-icons">insert_drive_file</i> Templates</a></li>
             <li><a href="#"><i class="material-icons">speaker_notes</i> Tips &amp; tricks</a></li>
-            <li><a href="#"><i class="material-icons">card_giftcard</i> Kosten</a></li>
+            <li><a href="#"><i class="material-icons">monetization_on</i> Kosten</a></li>
             <li><a href="#"><i class="material-icons">view_list</i> Vacatures</a></li>
             <li><a href="#"><i class="material-icons">info</i> Voorwaarden</a></li>
           </ul>
