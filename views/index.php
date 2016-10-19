@@ -18,7 +18,7 @@
             <div class="carousel-inner" role="listbox">
               <div class="item active">
                 <img src="images/steps/1.png" alt="Step 1">
-                <center>
+                <center class="sliderheight">
                   <h4><span class="badge">1</span> Voer je gegevens in om te beginnen met het maken van jou CV</h4>
                 </center>
               </div>
@@ -48,6 +48,13 @@
               </div>
             </div>
           </div>
+          <script>
+          $(document).ready(function(){
+
+            var height = $('.sliderheight').height();
+            $('.carousel-inner .item center').height(height);
+          });
+          </script>
 
         </div>
         <div class="col-lg-4 intro-card">
