@@ -213,7 +213,7 @@ input[type=text], input[type=password], select {
 input[type=submit], .wideButton {
   text-transform: uppercase;
   background: #ff4f1a;
-  border: none;
+  border: solid 2px transparent;
   font-weight: 500;
   font-size: 20px;
   width: 100%;
