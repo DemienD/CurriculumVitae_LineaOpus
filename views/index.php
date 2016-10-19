@@ -75,11 +75,11 @@
           <p>Ben jij op zoek naar werk? Wil je ergens solliciteren maar heb je nog geen CV om op te sturen?
           CVCreate helpt je daarbij! Kijk hieronder eens naar onze CV mogelijkheden, lees de Tips &amp; Tricks of bekijk wat vacatures!</p>
           <ul class="intro-steps links">
-            <li><a href="#">&gt; Templates</a></li>
-            <li><a href="#">&gt; Tips &amp; tricks</a></li>
-            <li><a href="#">&gt; Kosten</a></li>
-            <li><a href="#">&gt; Vacatures</a></li>
-            <li><a href="#">&gt; Voorwaarden</a></li>
+            <li><a href="#"><i class="material-icons">insert_drive_file</i> Templates</a></li>
+            <li><a href="#"><i class="material-icons">speaker_notes</i> Tips &amp; tricks</a></li>
+            <li><a href="#"><i class="material-icons">card_giftcard</i> Kosten</a></li>
+            <li><a href="#"><i class="material-icons">view_list</i> Vacatures</a></li>
+            <li><a href="#"><i class="material-icons">info</i> Voorwaarden</a></li>
           </ul>
         </div>
       </div>

@@ -60,7 +60,7 @@
 
 .intro-steps li * {
   margin: 0;
-
+  vertical-align: middle;
 }
 
 .intro-steps.links li a {
